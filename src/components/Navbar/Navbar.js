@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-dark">
       <div className="container">
@@ -23,6 +23,10 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/login">Login</NavLink>
+            </li>
+            <li className="nav-item">
+              {/* <NavLink className="nav-link" to="/logout">Logout</NavLink> */}
+              <button onClick={() => props.logout() }>logout</button>
             </li>
           </ul>
         </div>
