@@ -12,7 +12,7 @@ const Profile = (props) => {
                 <p><strong>Email:</strong>{props.profile.email}</p>
                 <p><strong>Current City:</strong>{props.profile.currentCity && props.profile.currentCity}</p>
                 <p><strong>Date Join:</strong> {props.profile.dateJoined && props.profile.dateJoined}</p>
-                <button onClick={() => props.onEdit()}>Edit</button>
+                <button className="btn-warning1" onClick={() => props.onEdit()}>Edit</button>
             </div>
         )
 
@@ -41,7 +41,7 @@ const Profile = (props) => {
                                 <input onChange={props.handleChange} className="form-control form-control-lg" type="text" id="profilePhoto" name="profilePhoto" value={props.profilePhoto} />
                             </div>
                             <button onClick={props.handleSubmit} className="btn btn-primary" type="submit">Save</button>
-                              
+                
                         </form>
                     </div>
 
