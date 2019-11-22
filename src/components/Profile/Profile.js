@@ -19,7 +19,7 @@ const Profile = (props) => {
     } else {
         return (
 
-            <div className="container mt-4 style={{float:"left"}}">
+            <div className="container mt-4" style={{float:"left"}}>
                 <div className="row">
                     <div className="col-md-4 offset-md-4">
                         <h4 className="mb-3">Edit Profile</h4>
@@ -41,7 +41,7 @@ const Profile = (props) => {
                                 <input onChange={props.handleChange} className="form-control form-control-lg" type="text" id="profilePhoto" name="profilePhoto" value={props.profilePhoto} />
                             </div>
                             <button onClick={props.handleSubmit} className="btn btn-primary" type="submit">Save</button>
-//                             <button className="btn btn-primary" type="submit">Cancel</button>
+                              
                         </form>
                     </div>
 
