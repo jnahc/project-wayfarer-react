@@ -1,11 +1,13 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import Register from '../Auth/Register';
+import Login from "../Auth/Login";
 
 const Navbar = (props) => {
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-dark">
       <div className="container">
-        <Link className="navbar-brand"  to="/">Expand at md</Link>
+        <Link className="navbar-brand"  to="/">Supreme Emperor</Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -16,17 +18,13 @@ const Navbar = (props) => {
               <NavLink className="nav-link" exact to="/">Home</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/profile">Profile</NavLink>
+              <Login currentUser={props.currentUser} setCurrentUser={props.setCurrentUser} />
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/register">Register</NavLink>
+              <Register />
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/login">Login</NavLink>
-            </li>
-            <li className="nav-item">
-              {/* <NavLink className="nav-link" to="/logout">Logout</NavLink> */}
-              <button onClick={() => props.logout() }>logout</button>
+              <button className="btn btn-danger" onClick={() => props.logout() }>logout</button>
             </li>
           </ul>
         </div>
@@ -35,4 +33,7 @@ const Navbar = (props) => {
   )
 };
 
+
 export default Navbar;
+
+
