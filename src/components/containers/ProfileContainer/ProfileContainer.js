@@ -65,15 +65,19 @@ class ProfileContainer extends Component {
         })
             .then((res) => {
                 console.log(res);
+                this.props.setCurrentUser(res.data.data);
+                this.props.history.push('/profile');
+
             })
             .catch((err) => console.log(err));
             this.setState({
                 editProfile: false,
             })
-        window.location.reload();
-
+        // window.location.reload();
+        
     }
-    
+
+
 
     // updateProfile = (updatedProfile) => {}
 
@@ -106,6 +110,7 @@ class ProfileContainer extends Component {
             )
         }
  
+
     }
 }
 

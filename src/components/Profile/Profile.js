@@ -38,7 +38,7 @@ const Profile = (props) => {
                         <input onChange={props.handleChange} className="form-control form-control-lg" type="text" id="profilePhoto" name="profilePhoto" value={props.profilePhoto} />
                     </div>
                     <button onClick={props.handleSubmit} className="btn btn-primary" type="submit">Save</button>
-                    <button className="btn btn-primary" type="submit">Cancel</button>
+                    {/* <button className="btn btn-primary" type="submit">Cancel</button> */}
                     </form>
                 </div>
                 </div>
