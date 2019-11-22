@@ -1,0 +1,37 @@
+.title-color{
+    color: purple !important;
+    font-family: 'Calistoga', cursive;
+}
+
+.navbar-color{
+    background-color: whitesmoke !important;
+}
+
+.btn-warning {
+    color: purple;
+    font-family: 'Calistoga', cursive;
+    background-color: transparent;
+    border-color: purple;
+    margin-right: 4px;
+}
+
+.btn-warning:hover {
+    color: purple;
+    font-family: 'Calistoga', cursive;
+    background-color: transparent;
+    border-color: purple;
+}
+
+.btn-primary {
+    color: purple;
+    font-family: 'Calistoga', cursive;
+    background-color: transparent;
+    border-color: purple;
+}
+
+.btn-primary:hover {
+    color: purple;
+    font-family: 'Calistoga', cursive;
+    background-color: transparent;
+    border-color: purple;
+}

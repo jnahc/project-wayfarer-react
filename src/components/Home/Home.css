@@ -1,0 +1,40 @@
+.skyscrapers {
+    width: 100%;
+    height:100%;
+}
+
+.carosize{
+    max-width: 100%;
+    height: 50vh;
+}
+
+.header-text{
+    text-align: center;
+    font-family: 'Calistoga', cursive;
+    color: purple;
+    margin-top: 7px;
+    border: 1px solid purple;
+}
+
+.heading-topics{
+    margin-left: 6px;
+}
+
+.topic1{
+    border: 1px solid gold;
+    font-family: 'Calistoga', cursive;
+}
+
+.topic2{
+    border: 1px solid gold;
+    font-family: 'Calistoga', cursive;
+}
+
+.topic3{
+    border: 1px solid gold;
+    font-family: 'Calistoga', cursive;
+}
+
+main{
+    background-color: whitesmoke;
+}
