@@ -25,10 +25,10 @@ const Navbar = (props) => {
               {!props.currentUser && <Register />}
             </li>
             <li className="nav-item">
-              {props.currentUser && <NavLink className="nav-link" exact to="/profile">Profile</NavLink>}
+              {props.currentUser && <NavLink className="nav-link title-color" exact to="/profile">Profile</NavLink>}
             </li>
             <li className="nav-item">
-              {props.currentUser && <button className="btn btn-danger" onClick={() => props.logout() }>logout</button>}
+              {props.currentUser && <button className="btn btn-warning" onClick={() => props.logout() }>Logout</button>}
             </li>
           </ul>
         </div>
