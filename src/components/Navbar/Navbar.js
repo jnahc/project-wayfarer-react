@@ -16,17 +16,17 @@ const Navbar = (props) => {
               <NavLink className="nav-link" exact to="/">Home</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/profile">Profile</NavLink>
+              {props.currentUser && <NavLink className="nav-link" to="/profile">Profile</NavLink>}
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/register">Register</NavLink>
+              {!props.currentUser && <NavLink className="nav-link" to="/register">Register</NavLink>}
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/login">Login</NavLink>
+              {!props.currentUser && <NavLink className="nav-link" to="/login">Login</NavLink>}
             </li>
             <li className="nav-item">
-              {/* <NavLink className="nav-link" to="/logout">Logout</NavLink> */}
-              <button onClick={() => props.logout() }>logout</button>
+              {props.currentUser && <NavLink className="nav-link" to="/" onClick={() => props.logout()}>Logout</NavLink>}
+              {/* <button onClick={() => props.logout() }>logout</button> */}
             </li>
           </ul>
         </div>
