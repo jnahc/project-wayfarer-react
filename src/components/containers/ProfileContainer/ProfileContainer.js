@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Profile from '../../Profile/Profile';
+import ProfilePostsContainer from '../ProfilePostsContainser/ProfilePostsContainer';
 import axios from 'axios';
 
 class ProfileContainer extends Component {
@@ -16,6 +17,7 @@ class ProfileContainer extends Component {
         this.onEdit = this.onEdit.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
+    
 
     componentDidMount() {
         const userId = localStorage.getItem('uid');
@@ -64,32 +66,52 @@ class ProfileContainer extends Component {
         })
             .then((res) => {
                 console.log(res);
+                this.props.setCurrentUser(res.data.data);
+                this.props.history.push('/profile');
+
             })
             .catch((err) => console.log(err));
             this.setState({
                 editProfile: false,
             })
         window.location.reload();
-
+        
     }
-    
+
+
 
     // updateProfile = (updatedProfile) => {}
 
     render () {
         console.log(this.state);
+        if (localStorage.getItem('uid')) {
+            return (
+                <div>
+                <Profile 
+                    profile={this.state.profile}
+                    editProfile={this.state.editProfile}
+                    onEdit={this.onEdit}
+                    handleChange={this.handleChange}
+                    handleSubmit={this.handleSubmit}
+                    firstName={this.state.firstName}
+                    lastName={this.state.lastName}
+                    currentCity={this.state.currentCity}
+                    profilePhoto={this.state.profilePhoto}
+                    />
+                <ProfilePostsContainer />
+                </div>
 
-        return <Profile 
-                profile={this.state.profile}
-                editProfile={this.state.editProfile}
-                onEdit={this.onEdit}
-                handleChange={this.handleChange}
-                handleSubmit={this.handleSubmit}
-                firstName={this.state.firstName}
-                lastName={this.state.lastName}
-                currentCity={this.state.currentCity}
-                profilePhoto={this.state.profilePhoto}
-                />
+            )
+            
+        } else {
+            return (
+                <>
+                Please register or login to access to your profile.
+                </>
+            )
+        }
+ 
+
     }
 }
 
