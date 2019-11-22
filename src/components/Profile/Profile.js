@@ -4,7 +4,7 @@ const Profile = (props) => {
     console.log(props)
     if (!props.editProfile) {
         return (
-            <div>
+            <div style={{float:"left"}}>
                 <h1>{props.firstName}  {props.lastName}'s Profile</h1>
                 <img src={props.profile.profilePhoto} alt=""/>
                 <p><strong>Email:</strong>{props.profile.email}</p>
@@ -16,8 +16,8 @@ const Profile = (props) => {
 
     } else {
         return (
-            <div className="container mt-4">
-                <div className="row">
+            <div className="container mt-4" style={{float:"left"}}>
+                <div className="row" >
                 <div className="col-md-4 offset-md-4">
                     <h4 className="mb-3">Edit Profile</h4>
                     <form >
