@@ -2,9 +2,9 @@ import React from 'react';
 
 import './Home.css'
 
-import skyscraper1 from './skyscraper1.jpg';
-import skyscraper2 from './skyscraper2.jpg';
-import skyscraper3 from './skyscraper3.jpg';
+import tourist1 from './tourist1.jpg';
+import tourist2 from './tourist2.jpg';
+import tourist3 from './tourist3.jpg';
 
 const Home = () => (
   <main>
@@ -16,7 +16,7 @@ const Home = () => (
       </ol>
       <div className="carousel-inner carosize">
         <div className="carousel-item active carousel-item-left">
-          <img className="bd-placeholder-img skyscrapers" src={skyscraper1} alt="Sky Scraper" />
+          <img className="bd-placeholder-img skyscrapers" src={tourist1} alt="Tourist" />
           <div className="container">
           {/* <div className="carousel-caption text-left">
               <h1>Example headline.</h1>
@@ -26,10 +26,10 @@ const Home = () => (
           </div>
         </div>
         <div className="carousel-item carousel-item-next carousel-item-left">
-          <img className="skyscrapers bd-placeholder-img" src={skyscraper2} alt="Sky Scraper" />
+          <img className="skyscrapers bd-placeholder-img" src={tourist2} alt="Tourist" />
         </div>
         <div className="carousel-item">
-          <img className="skyscrapers bd-placeholder-img" src={skyscraper3} alt="Sky Scraper" />
+          <img className="skyscrapers bd-placeholder-img" src={tourist3} alt="Tourist" />
         </div>
       </div>
       <a className="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
