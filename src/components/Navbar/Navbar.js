@@ -18,13 +18,16 @@ const Navbar = (props) => {
               <NavLink className="nav-link" exact to="/">Home</NavLink>
             </li>
             <li className="nav-item">
-              <Login currentUser={props.currentUser} setCurrentUser={props.setCurrentUser} />
+              {!props.currentUser && <Login currentUser={props.currentUser} setCurrentUser={props.setCurrentUser} />}
             </li>
             <li className="nav-item">
-              <Register />
+              {!props.currentUser && <Register />}
             </li>
             <li className="nav-item">
-              <button className="btn btn-danger" onClick={() => props.logout() }>logout</button>
+              {props.currentUser && <NavLink className="nav-link" exact to="/profile">Profile</NavLink>}
+            </li>
+            <li className="nav-item">
+              {props.currentUser && <button className="btn btn-danger" onClick={() => props.logout() }>logout</button>}
             </li>
           </ul>
         </div>
