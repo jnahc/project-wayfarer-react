@@ -15,6 +15,6 @@ export default () =>
     {/* <Route path='/login' render={() => <Login currentUser={currentUser} setCurrentUser={setCurrentUser} />} /> */}
     <Route path='/profile' component={ProfileContainer} />
     {/* <Route path='/logout' render={() => <Login currentUser={currentUser} setCurrentUser={setCurrentUser} />} /> */}
-    <Route path='/users/post/' component={PostDetailContainer} />
+    <Route path='/postdetail/:id' component={PostDetailContainer} />
   </Switch>
 )

@@ -1,28 +1,35 @@
 import React, {Component} from 'react';
-
+import PostDetail from '../../PostDetail/PostDetail';
 import axios from 'axios';
 
+
 class PostDetailContainer extends Component {
-  // state={ post }
+
+  state = {
+    post: []
+  }
 
   componentDidMount () {
-    const userId = localStorage.getItem('uid');
-    axios.get(`${process.env.REACT_APP_API_URL}/posts/${props._id}`, {
+
+    axios.get(`${process.env.REACT_APP_API_URL}/posts/${window.location.pathname.split('/')[2]}`, {
       withCredentials: true,
     })
       .then((res) => {
         console.log(res);
-        // this.setState({
-        //   post: res.data.post
-        // })
+        this.setState({
+          post: res.data.data
+        })
       })
       .catch((err) => console.log(err));
+
   }
 
   render () {
+  
     return (
-      <h2>here is the post container</h2>
+      <PostDetail post={this.state.post}/>
     )
   }
 }
 
+export default PostDetailContainer;
