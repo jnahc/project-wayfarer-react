@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Profile from '../../Profile/Profile';
+import ProfilePostsContainer from '../ProfilePostsContainser/ProfilePostsContainer';
 import axios from 'axios';
 
 class ProfileContainer extends Component {
@@ -82,19 +83,34 @@ class ProfileContainer extends Component {
 
     render () {
         console.log(this.state);
+        if (localStorage.getItem('uid')) {
+            return (
+                <div>
+                <Profile 
+                    profile={this.state.profile}
+                    editProfile={this.state.editProfile}
+                    onEdit={this.onEdit}
+                    handleChange={this.handleChange}
+                    handleSubmit={this.handleSubmit}
+                    firstName={this.state.firstName}
+                    lastName={this.state.lastName}
+                    currentCity={this.state.currentCity}
+                    profilePhoto={this.state.profilePhoto}
+                    />
+                <ProfilePostsContainer />
+                </div>
 
-        return <Profile 
-                profile={this.state.profile}
-                editProfile={this.state.editProfile}
-                onEdit={this.onEdit}
-                handleChange={this.handleChange}
-                handleSubmit={this.handleSubmit}
-                firstName={this.state.firstName}
-                lastName={this.state.lastName}
-                currentCity={this.state.currentCity}
-                profilePhoto={this.state.profilePhoto}
-                populateProfile={this.populateProfile}
-                />
+            )
+            
+        } else {
+            return (
+                <>
+                Please register or login to access to your profile.
+                </>
+            )
+        }
+ 
+
     }
 }
 
