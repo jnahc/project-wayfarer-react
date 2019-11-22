@@ -28,7 +28,7 @@ const Navbar = (props) => {
               {props.currentUser && <NavLink className="nav-link title-color" exact to="/profile">Profile</NavLink>}
             </li>
             <li className="nav-item">
-              {props.currentUser && <button className="btn btn-warning" onClick={() => props.logout() }>Logout</button>}
+              {props.currentUser &&  <button className="btn btn-warning" onClick={() => props.logout() }>Logout</button>}
             </li>
           </ul>
         </div>

@@ -10,8 +10,8 @@ const Profile = (props) => {
                 <h1>{props.firstName}  {props.lastName}'s Profile</h1>
                 <img src={props.profilePhoto} alt=""/>
                 <p><strong>Email:</strong>{props.profile.email}</p>
-                <p><strong>Current City:</strong>{ props.currentCity && props.currentCity}</p>
-                <p><strong>Date Join:</strong> { props.dateJoined && props.dateJoined}</p>
+                <p><strong>Current City:</strong>{props.currentCity && props.currentCity}</p>
+                <p><strong>Date Join:</strong> {props.profile.dateJoined && props.profile.dateJoined}</p>
                 <button onClick={() => props.onEdit()}>Edit</button>
             </div>
         )

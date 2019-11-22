@@ -17,7 +17,9 @@ class ProfileContainer extends Component {
         this.onEdit = this.onEdit.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
-    
+
+
+  
 
     componentDidMount() {
         const userId = localStorage.getItem('uid');
@@ -57,7 +59,7 @@ class ProfileContainer extends Component {
         const userId = localStorage.getItem('uid');
         
         console.log(this.state);
-        var newObj = Object.assign({}, this.state);
+        let newObj = Object.assign({}, this.state);
         delete newObj.profile;
         delete newObj.editProfile;
         console.log(newObj)
@@ -74,8 +76,7 @@ class ProfileContainer extends Component {
             this.setState({
                 editProfile: false,
             })
-        // window.location.reload();
-        
+    
     }
 
 
