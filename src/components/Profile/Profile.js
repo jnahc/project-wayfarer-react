@@ -1,7 +1,5 @@
 import React from 'react';
-
 import './Profile.css'
-
 const Profile = (props) => {
     console.log(props)
     if (!props.editProfile) {
@@ -15,10 +13,8 @@ const Profile = (props) => {
                 <button onClick={() => props.onEdit()}>Edit</button>
             </div>
         )
-
     } else {
         return (
-
             <div className="container mt-4" style={{float:"left"}}>
                 <div className="row">
                     <div className="col-md-4 offset-md-4">
@@ -48,5 +44,4 @@ const Profile = (props) => {
         )
     }
 };
-
 export default Profile;

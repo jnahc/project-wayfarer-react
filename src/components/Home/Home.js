@@ -2,9 +2,9 @@ import React from 'react';
 
 import './Home.css'
 
-import skyscraper1 from './skyscraper1.jpg';
-import skyscraper2 from './skyscraper2.jpg';
-import skyscraper3 from './skyscraper3.jpg';
+import tourist1 from './tourist1.jpg';
+import tourist2 from './tourist2.jpg';
+import tourist3 from './tourist3.jpg';
 
 const Home = () => (
   <main>
@@ -16,20 +16,15 @@ const Home = () => (
       </ol>
       <div className="carousel-inner carosize">
         <div className="carousel-item active carousel-item-left">
-          <img className="bd-placeholder-img skyscrapers" src={skyscraper1} alt="Sky Scraper" />
+          <img className="bd-placeholder-img skyscrapers" src={tourist1} alt="Tourist" />
           <div className="container">
-          {/* <div className="carousel-caption text-left">
-              <h1>Example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a className="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-            </div> */}
           </div>
         </div>
         <div className="carousel-item carousel-item-next carousel-item-left">
-          <img className="skyscrapers bd-placeholder-img" src={skyscraper2} alt="Sky Scraper" />
+          <img className="skyscrapers bd-placeholder-img" src={tourist2} alt="Tourist" />
         </div>
         <div className="carousel-item">
-          <img className="skyscrapers bd-placeholder-img" src={skyscraper3} alt="Sky Scraper" />
+          <img className="skyscrapers bd-placeholder-img" src={tourist3} alt="Tourist" />
         </div>
       </div>
       <a className="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
@@ -44,20 +39,17 @@ const Home = () => (
 
   <h2 className="header-text">Wayfarer is...</h2>
   <div className="row heading-topics">
-    <div className="col-md-4 topic1">
+    <div className="col-md-3 topic1">
       <h2>Topic</h2>
-      <p>Donec id elit non mi porta gravida at eget<br/> metus. Fusce dapibus, tellus ac cursus<br/> commodo, tortor mauris condimentum<br/> nibh, ut fermentum massa justo sit amet<br/> risus. Etiam porta sem malesuada magna<br/> mollis euismod. Donec sed odio dui. </p>
-      {/* <p><a className="btn btn-secondary" href="#" role="button">View details »</a></p> */}
+      <p className="break-para">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     </div>
-    <div className="col-md-4 topic2">
+    <div className="col-md-3 topic2">
       <h2>Topic</h2>
-      <p>Donec id elit non mi porta gravida at eget<br/> metus. Fusce dapibus, tellus ac cursus<br/> commodo, tortor mauris condimentum<br/> nibh, ut fermentum massa justo sit amet<br/> risus. Etiam porta sem malesuada magna<br/> mollis euismod. Donec sed odio dui. </p>
-      {/* <p><a className="btn btn-secondary" href="#" role="button">View details »</a></p> */}
+      <p className="break-para">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     </div>
-    <div className="col-md-4 topic3">
+    <div className="col-md-3 topic3">
       <h2>Topic</h2>
-      <p>Donec id elit non mi porta gravida at eget<br/> metus. Fusce dapibus, tellus ac cursus<br/> commodo, tortor mauris condimentum<br/> nibh, ut fermentum massa justo sit amet<br/> risus. Etiam porta sem malesuada magna<br/> mollis euismod. Donec sed odio dui. </p>
-      {/* <p><a className="btn btn-secondary" href="#" role="button">View details »</a></p> */}
+      <p className="break-para">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     </div>
   </div>
 </main>
