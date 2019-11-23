@@ -10,7 +10,7 @@ const Profile = (props) => {
                 <p><strong>Email:</strong>{props.profile.email}</p>
                 <p><strong>Current City:</strong>{props.currentCity && props.currentCity}</p>
                 <p><strong>Date Join:</strong> {props.profile.dateJoined && props.profile.dateJoined}</p>
-                <button onClick={() => props.onEdit()}>Edit</button>
+                <button className="btn-warning1" onClick={() => props.onEdit()}>Edit</button>
             </div>
         )
     } else {
