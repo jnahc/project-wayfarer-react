@@ -24,7 +24,7 @@ class PostDetailContainer extends Component {
       })
       .catch((err) => console.log(err));
 
-      const userId = localStorage.getItem('uid');
+      // const userId = localStorage.getItem('uid');
       axios.get(`${process.env.REACT_APP_API_URL}/users/${window.location.pathname.split('/')[2]}`,{
           withCredentials: true,
       })

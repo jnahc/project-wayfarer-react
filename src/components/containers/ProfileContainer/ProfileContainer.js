@@ -76,9 +76,7 @@ class ProfileContainer extends Component {
             this.setState({
                 editProfile: false,
             })
-        
-        // window.location.reload(true);
-        
+    
     }
 
 
