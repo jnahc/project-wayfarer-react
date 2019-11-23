@@ -25,6 +25,10 @@ const Navbar = (props) => {
               {!props.currentUser && <Register />}
             </li>
             <li className="nav-item">
+              {props.currentUser && <NavLink className="nav-link title-color" exact to="/cities/5dd8793c53d26bd45542241e">Cities</NavLink>}
+            </li>
+          
+            <li className="nav-item">
               {props.currentUser && <NavLink className="nav-link title-color" exact to="/profile">Profile</NavLink>}
             </li>
             <li className="nav-item">
