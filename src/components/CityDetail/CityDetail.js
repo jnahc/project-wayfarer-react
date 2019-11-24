@@ -1,4 +1,5 @@
 import React from 'react';
+// import { Link } from 'react-router-dom';
 
 
 const CityDetail = (props) => {
@@ -15,6 +16,7 @@ const CityDetail = (props) => {
   //   )
 
   // })
+
   if (props.cityInfo.cityName) {
     return (
       <div>
@@ -30,9 +32,8 @@ const CityDetail = (props) => {
         City No Found.
       </div>
     )
+  
   }
-
-
 }
 
 export default CityDetail;
