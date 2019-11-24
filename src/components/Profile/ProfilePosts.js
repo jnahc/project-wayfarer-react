@@ -2,6 +2,7 @@ import React from 'react';
 import ProfilePost from './ProfilePost'
 
 const ProfilePosts = (props) => {
+    console.log(props.posts)
     let profileList = props.posts.map((post) => {
         return (
             
