@@ -2,8 +2,9 @@ import React from 'react';
 import ProfilePost from './ProfilePost'
 
 const ProfilePosts = (props) => {
-    console.log(props.posts)
-    let profileList = props.posts.map((post) => {
+    // console.log(props.posts)
+    let sortedProfilePostList = props.posts.sort((a,b) => a.dateCreated - b.dateCreated).reverse()
+    let profileList = sortedProfilePostList.map((post) => {
         return (
             
             <ProfilePost 
@@ -11,6 +12,7 @@ const ProfilePosts = (props) => {
                 postId={post._id}
                 title={post.title}
                 body={post.body.slice(0,50)}
+                dateCreated={post.dateCreated}
             />
         );
     });
