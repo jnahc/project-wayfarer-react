@@ -19,7 +19,7 @@ const CityDetail = (props) => {
     <div>
       <h2>City - {props.cityInfo.cityName} </h2>
       <h3>Country - {props.cityInfo.countryName}</h3>
-      <div><img src={`${props.cityInfo.picture}`} /></div>
+      <div><img src={`${props.cityInfo.picture}`} alt="" /></div>
 
     </div>
   )
