@@ -3,7 +3,7 @@ import CityPost from '../CityPost/CityPost';
 
 
 const CityPosts = (props) => {
-  console.log(props.posts)
+  console.log('CityPosts.js', props.posts)
   let cityList = props.posts.map((post) => {
     return (
       <CityPost 
@@ -20,9 +20,6 @@ const CityPosts = (props) => {
       <h1>City Posts</h1>
       {cityList}
     </ul>
-    // <div>
-    //   this is the city posts
-    // </div>
   )
 };
 
