@@ -16,7 +16,7 @@ class PostDetailContainer extends Component {
   callCity () {
     // API CALL FOR CITYNAME
     console.log('callCity API Fired')
-    axios.get(`${process.env.REACT_APP_API_URL}/cities/${this.state.post.city}`,
+    axios.get(`${process.env.REACT_APP_API_URL}/cities/id/${this.state.post.city}`,
     // {
     //   withCredentials: true,
     // }
