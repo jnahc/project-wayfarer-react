@@ -1,12 +1,15 @@
 import React, {Component} from 'react';
-import CityModal from "./CityPosts/CityModal";
+import CityModal from '../../CityModal/CityModal';
 import axios from 'axios';
 
 
 class CityModalContainer extends Component {
+  //updated state keys
   state = {
     title: '',
-    content: '',
+    body: '',
+    cityId: '',
+    author: '',
   }
 
   handleChange = (event) => {
@@ -19,7 +22,8 @@ class CityModalContainer extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     console.log(this.state);
-    axios.post(`${process.env.REACT_APP_API_URL}/CityModalContainer/CityModalContainer`, this.state)
+    // updated axios call
+    axios.post(`${process.env.REACT_APP_API_URL}/posts/${this.userId}/${this.cityId}`, this.state)
       .then((res) => {
         console.log(res);
       })
@@ -28,7 +32,7 @@ class CityModalContainer extends Component {
 
   render() {
     return (
-     <CityModal handleChange={this.handleChange} handleSubmit={this.handleSubmit} user={this.state} />
+     <CityModal handleChange={this.handleChange} handleSubmit={this.handleSubmit} post={this.state} />
     )
   };
 }

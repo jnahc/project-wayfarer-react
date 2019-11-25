@@ -1,7 +1,5 @@
 import React from 'react';
 import CityPost from '../CityPost/CityPost';
-import CityModal from './CityModal';
-// import CityModalContainer from './CityModalContainer/CityModalContainer';
 
 
 
@@ -25,8 +23,6 @@ const CityPosts = (props) => {
     <ul style={{paddingTop:50}}>
       <h1>City Posts</h1>
       {cityList}
-      {/* <CityModalContainer /> */}
-      <CityModal />
     </ul>
   )
 };
