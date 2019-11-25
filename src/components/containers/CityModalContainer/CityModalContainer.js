@@ -10,19 +10,21 @@ class CityModalContainer extends Component {
     body: '',
     currentUser: '',
     author: '',
+    city: '',
   }
 
   componentDidMount () {
     this.setState({
       currentUser: localStorage.getItem('uid'),
-      author: localStorage.getItem('uid')
+      author: localStorage.getItem('uid'),
     })
   }
 
   handleChange = (event) => {
     // console.log(event);
     this.setState({
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
+      city: this.props.cityObjId,
     });
   };
 
