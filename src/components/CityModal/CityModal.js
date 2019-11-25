@@ -10,7 +10,7 @@ function CityModal (props) {
 
 
     return (
-        <>
+        <div>
             <Button variant="warning" onClick={handleShow}>Create Post</Button>
 
             <Modal show={show} onHide={handleClose}>
@@ -26,14 +26,14 @@ function CityModal (props) {
                             </div>
                             <div className="form-group">
                                 <label htmlFor="body">Post:</label>
-                                <input onChange={props.handleChange} className="form-control form-control-lg" type="text" id="body" name="body" value={props.post.body} />
+                                <textarea onChange={props.handleChange} className="form-control form-control-lg" type="text" id="body" name="body" value={props.post.body} />
                             </div>
                             <button className="btn btn-primary float-right" type="submit">Save Changes</button>
                         </form>
                     </div>
                 </Modal.Body>
             </Modal>
-        </>
+        </div>
     )
 }
 
