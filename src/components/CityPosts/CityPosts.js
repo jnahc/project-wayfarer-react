@@ -1,5 +1,6 @@
 import React from 'react';
 import CityPost from '../CityPost/CityPost';
+// import './CityPost.css';
 
 
 
@@ -20,10 +21,12 @@ const CityPosts = (props) => {
   })
 
   return (
-    <ul style={{paddingTop:50}}>
-      <h1>City Posts</h1>
+    // <ul style={{paddingTop:50}}>
+    <>
+      <h3>Posts</h3>
       {cityList}
-    </ul>
+    </>
+    // </ul>
   )
 };
 

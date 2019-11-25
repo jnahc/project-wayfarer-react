@@ -2,7 +2,8 @@ import React, {Component} from 'react'
 import CitySlideMenu from '../../CitySlideMenu/CitySlideMenu';
 import CityDetail from '../../CityDetail/CityDetail';
 import CityPosts from '../../CityPosts/CityPosts';
-import CityModalContainer from '../CityModalContainer/CityModalContainer'
+import CityModalContainer from '../CityModalContainer/CityModalContainer';
+import CityPostSlideMenu from '../../CityPostSlideMenu/CityPostSlideMenu';
 import axios from 'axios';
 
 class CityDetailContainer extends Component {
@@ -77,8 +78,9 @@ class CityDetailContainer extends Component {
           <div className="col-sm"> 
             <CityDetail cityInfo={this.state} />
             <br></br>
-            <CityModalContainer cityId={this.state.cityId} cityName={this.state.cityName} cityObjId={this.state.cityObjId}/>  
-            <CityPosts posts={this.state.posts} />
+            <CityModalContainer cityId={this.state.cityId} cityName={this.state.cityName} cityObjId={this.state.cityObjId}/>
+            <CityPostSlideMenu posts={this.state.posts} />  
+            {/* <CityPosts posts={this.state.posts} /> */}
           </div>
         </div>
       </div>
