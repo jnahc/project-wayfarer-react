@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 import './PostDetail.css';
 
 // reference https://stackoverflow.com/questions/2013255/how-to-get-year-month-day-from-a-date-object
@@ -35,6 +36,7 @@ const PostDetail = (props) => {
             <p>Country: {props.city.country}</p>
             <p>{props.body}</p>
             <button className="btn-warning1 editButton" onClick={() => props.onEdit()}>Edit</button>
+
         </div>
 
         )

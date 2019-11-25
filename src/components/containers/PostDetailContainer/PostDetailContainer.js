@@ -100,6 +100,22 @@ class PostDetailContainer extends Component {
     .catch((err) => console.log(err));
   }
 
+  // callPostAuthor () {
+     // API CALL FOR USERNAME
+    // console.log('CallPostAuthorFired',this.state.post.author[0]);
+  //    axios.get(`${process.env.REACT_APP_API_URL}/users/${window.location.pathname.split('/')[2]}`,{
+  //     withCredentials: true,
+  // })
+  //   .then((res) => {
+  //   console.log(res);
+  //   this.setState({
+  //     firstName: res.data.data.firstName,
+  //     lastName: res.data.data.lastName,
+  //   });
+  //   })
+  //   .catch((err) => console.log(err));
+  // }
+
   componentDidMount () {
 
     //API CALL FOR POST
@@ -116,6 +132,7 @@ class PostDetailContainer extends Component {
         })
         this.callCity();
         this.callAuthorName();
+
       })
       .catch((err) => console.log(err));
 
