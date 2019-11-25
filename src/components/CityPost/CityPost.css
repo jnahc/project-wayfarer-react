@@ -1,0 +1,15 @@
+.postTitle {
+    margin-left: 20px;
+}
+
+
+.postContent {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.cityPostImg {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+}

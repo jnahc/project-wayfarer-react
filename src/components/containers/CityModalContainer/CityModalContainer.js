@@ -11,6 +11,7 @@ class CityModalContainer extends Component {
     currentUser: '',
     author: '',
     city: '',
+    photoUrl: '',
   }
 
   componentDidMount () {

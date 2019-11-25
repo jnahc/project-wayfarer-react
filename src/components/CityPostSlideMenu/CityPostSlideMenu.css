@@ -1,14 +1,14 @@
-.slideContainer {
+.postSlideContainer {
     margin-top: 30px;
 }
 
-#slide {
+#postSlide {
     width: 450px;
-    height: 700px;
+    height: 270px;
     margin-top: 20px;
 }
 
-#slide a {
+#postSlide a {
     margin-bottom: 20px;
     border-radius: 8px;
     padding: 20px;

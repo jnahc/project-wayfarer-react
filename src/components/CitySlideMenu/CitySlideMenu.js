@@ -6,8 +6,7 @@ import './CitySlideMenu.css';
 
 
 const CitySlideMenu = (props) => {
-  console.log(props, '123123')
-  console.log(props.citiesList[0],'12312312412')
+
   const list = props.citiesList.map((city) => {
     return (
         <CitySlideCity 

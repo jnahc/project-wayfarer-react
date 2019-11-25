@@ -25,7 +25,11 @@ function CityModal (props) {
                                 <input onChange={props.handleChange} className="form-control form-control-lg" type="text" id="title" name="title" value={props.post.title} />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="body">Post:</label>
+                                <label htmlFor="photoUrl">Photo URL</label>
+                                <input onChange={props.handleChange} className="form-control form-control-lg" type="text" id="photoUrl" name="photoUrl" value={props.post.photoUrl} />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="photoUrl">Post:</label>
                                 <textarea onChange={props.handleChange} className="form-control form-control-lg" type="text" id="body" name="body" value={props.post.body} />
                             </div>
                             <button onClick={handleClose} className="btn btn-primary float-right" type="submit">Save Changes</button>
