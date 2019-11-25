@@ -1,4 +1,5 @@
 import React from 'react';
+import PostDeleteContainer from "../containers/PostDeleteContainer/PostDeleteContainer"
 
 
 import './PostDetail.css';
@@ -36,6 +37,7 @@ const PostDetail = (props) => {
             <p>Country: {props.city.country}</p>
             <p>{props.body}</p>
             <button className="btn-warning1 editButton" onClick={() => props.onEdit()}>Edit</button>
+            <PostDeleteContainer />
 
         </div>
 
