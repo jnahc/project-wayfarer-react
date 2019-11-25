@@ -9,8 +9,8 @@ class PostDetailContainer extends Component {
     post: [],
     firstName: '',
     lastName: '',
-    city: {}
-    
+    city: {},
+    postAuthor: {},
   }
 
   callCity () {
@@ -29,6 +29,23 @@ class PostDetailContainer extends Component {
     })
     .catch((err) => console.log(err));
   }
+  callAuthorName () {
+    // API CALL FOR AUTHOR NAME
+    console.log('callAuthorName API Fired')
+    console.log(this.state.post.author[0])
+    axios.get(`${process.env.REACT_APP_API_URL}/posts/author/${this.state.post.author[0]}`,
+    // {
+    //   withCredentials: true,
+    // }
+    )
+    .then((res) => {
+    console.log('callAuthor API Success',res);
+    this.setState({
+      postAuthor: res.data.data 
+    });
+    })
+    .catch((err) => console.log(err));
+  }
 
   componentDidMount () {
 
@@ -42,6 +59,7 @@ class PostDetailContainer extends Component {
           post: res.data.data
         })
         this.callCity();
+        this.callAuthorName();
       })
       .catch((err) => console.log(err));
 
@@ -63,7 +81,7 @@ class PostDetailContainer extends Component {
   render () {
   
     return (
-      <PostDetail post={this.state.post} firstName={this.state.firstName} lastName={this.state.lastName} city={this.state.city} />
+      <PostDetail post={this.state.post} city={this.state.city} postAuthor={this.state.postAuthor} />
     )
   }
 }
