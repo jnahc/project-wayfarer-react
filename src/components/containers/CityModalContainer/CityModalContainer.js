@@ -35,8 +35,10 @@ class CityModalContainer extends Component {
     axios.post(`${process.env.REACT_APP_API_URL}/posts/${this.state.currentUser}/${this.props.cityId}`, this.state)
       .then((res) => {
         console.log(res);
+        window.location.reload();
       })
       .catch((err) => console.log(err));
+      
   }
 
   render() {
