@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import CitySlideMenu from '../../CitySlideMenu/CitySlideMenu';
 import CityDetail from '../../CityDetail/CityDetail';
 import CityPosts from '../../CityPosts/CityPosts';
 import axios from 'axios';
@@ -10,7 +11,8 @@ class CityDetailContainer extends Component {
     countryName: '',
     picture: '',
     cityId: '',
-    posts: []
+    posts: [],
+    citiesList: [],
   }
 
   componentDidMount () {
@@ -26,6 +28,7 @@ class CityDetailContainer extends Component {
           postIds: res.data.data.posts
         })
         this.grabPosts();
+        this.grabCitiesList();
       })
       .catch((err) => console.log(err));
   }
@@ -41,13 +44,39 @@ class CityDetailContainer extends Component {
       .catch((err) => console.log(err));
   }
 
+  grabCitiesList () {
+    axios.get(`${process.env.REACT_APP_API_URL}/cities`)
+      .then((res) => {
+        console.log('Cities List API Fired', res.data.data);
+        this.setState({
+          citiesList: res.data.data
+        });
+      })
+      .catch((err) => console.log(err));
+  }
+
+  
+
+  
+
+  
+
 
 
   render () {
     return (
       <>
-        <CityDetail cityInfo={this.state} />
-        <CityPosts posts={this.state.posts} />
+      <div className="container">
+        <div className="row">
+          <div className="col-sm">   
+            <CitySlideMenu citiesList={this.state.citiesList} />
+          </div>
+          <div className="col-sm">   
+            <CityDetail cityInfo={this.state} />
+            <CityPosts posts={this.state.posts} />
+          </div>
+        </div>
+      </div>
       </>
     )
   }

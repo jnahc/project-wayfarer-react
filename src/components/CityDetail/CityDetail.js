@@ -1,4 +1,5 @@
 import React from 'react';
+import './CityDetail.css';
 
 
 const CityDetail = (props) => {
@@ -17,12 +18,18 @@ const CityDetail = (props) => {
   // })
   if (props.cityInfo.cityName) {
     return (
-      <div>
+      <>
+
+
+
+    
+      <div className="cityHeader">
         <h2>City - {props.cityInfo.cityName} </h2>
         <h3>Country - {props.cityInfo.countryName}</h3>
         <div><img src={`${props.cityInfo.picture}`} /></div>
   
       </div>
+      </>
     )
   } else {
     return (

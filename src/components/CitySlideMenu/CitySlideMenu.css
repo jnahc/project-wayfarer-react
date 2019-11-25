@@ -1,0 +1,15 @@
+.slideContainer {
+    margin-top: 30px;
+}
+
+#slide {
+    width: 450px;
+    height: 600px;
+    margin-top: 20px;
+}
+
+#slide a {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    padding: 20px;
+}

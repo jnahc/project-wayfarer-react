@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+console.log(Date(Date.now()) )
 
 const ProfilePost = (props) => {
     return (
