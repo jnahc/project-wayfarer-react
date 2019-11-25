@@ -2,6 +2,7 @@ import React from 'react';
 import CityPost from '../CityPost/CityPost';
 
 
+
 const CityPosts = (props) => {
   // console.log('CityPosts.js', props.posts)
   let sortedCityPostList = props.posts.slice().sort((a,b) => a.dateCreated - b.dateCreated).reverse();

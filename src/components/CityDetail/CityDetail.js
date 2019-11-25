@@ -16,6 +16,7 @@ const CityDetail = (props) => {
   //   )
 
   // })
+
   if (props.cityInfo.cityName) {
     return (
       <>
@@ -32,9 +33,8 @@ const CityDetail = (props) => {
         City Not Found.
       </div>
     )
+  
   }
-
-
 }
 
 export default CityDetail;

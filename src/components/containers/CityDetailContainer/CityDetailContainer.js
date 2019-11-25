@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import CitySlideMenu from '../../CitySlideMenu/CitySlideMenu';
 import CityDetail from '../../CityDetail/CityDetail';
 import CityPosts from '../../CityPosts/CityPosts';
+import CityModalContainer from '../CityModalContainer/CityModalContainer'
 import axios from 'axios';
 
 class CityDetailContainer extends Component {
@@ -13,6 +14,7 @@ class CityDetailContainer extends Component {
     cityId: '',
     posts: [],
     citiesList: [],
+    cityObjId: '',
   }
 
   componentDidMount () {
@@ -25,7 +27,8 @@ class CityDetailContainer extends Component {
           countryName: res.data.data.country,
           picture: res.data.data.picture,
           cityId: window.location.pathname.split('/')[2],
-          postIds: res.data.data.posts
+          postIds: res.data.data.posts,
+          cityObjId: res.data.data._id,
         })
         this.grabPosts();
         this.grabCitiesList();
@@ -36,7 +39,7 @@ class CityDetailContainer extends Component {
   grabPosts () {
     axios.get(`${process.env.REACT_APP_API_URL}/posts/city/${this.state.cityId}`)
       .then((res) => {
-        console.log('City Posts Container API Fired', res);
+        // console.log('City Posts Container API Fired', res);
         this.setState({
           posts: res.data.posts
         });
@@ -71,7 +74,8 @@ class CityDetailContainer extends Component {
           <div className="col-sm">   
             <CitySlideMenu citiesList={this.state.citiesList} />
           </div>
-          <div className="col-sm">   
+          <div className="col-sm">
+            <CityModalContainer cityId={this.state.cityId} cityName={this.state.cityName} cityObjId={this.state.cityObjId}/>   
             <CityDetail cityInfo={this.state} />
             <CityPosts posts={this.state.posts} />
           </div>
