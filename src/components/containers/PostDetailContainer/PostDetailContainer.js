@@ -169,7 +169,6 @@ class PostDetailContainer extends Component {
           onEdit={this.onEdit}
           editPost={this.state.editPost}
        />
-      <div>123</div>
       </>
     )
   }
