@@ -6,7 +6,6 @@ const ProfilePosts = (props) => {
     let sortedProfilePostList = props.posts.sort((a,b) => a.dateCreated - b.dateCreated).reverse()
     let profileList = sortedProfilePostList.map((post) => {
         return (
-            
             <ProfilePost 
                 key={post._id}
                 postId={post._id}
