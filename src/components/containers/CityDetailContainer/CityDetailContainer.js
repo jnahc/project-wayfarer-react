@@ -74,9 +74,10 @@ class CityDetailContainer extends Component {
           <div className="col-sm">   
             <CitySlideMenu citiesList={this.state.citiesList} />
           </div>
-          <div className="col-sm">
-            <CityModalContainer cityId={this.state.cityId} cityName={this.state.cityName} cityObjId={this.state.cityObjId}/>   
+          <div className="col-sm"> 
             <CityDetail cityInfo={this.state} />
+            <br></br>
+            <CityModalContainer cityId={this.state.cityId} cityName={this.state.cityName} cityObjId={this.state.cityObjId}/>  
             <CityPosts posts={this.state.posts} />
           </div>
         </div>
