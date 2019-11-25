@@ -21,8 +21,8 @@ const CityDetail = (props) => {
     return (
       <>
       <div className="cityHeader">
-        <h1>{props.cityInfo.cityName} </h1>
-        <h4>{props.cityInfo.countryName}</h4>
+        <h1 className="city-name">{props.cityInfo.cityName} </h1>
+        <h4 className="country-name">{props.cityInfo.countryName}</h4>
         <div><img src={`${props.cityInfo.picture}`} /></div>
       </div>
       </>

@@ -19,12 +19,14 @@ const ProfilePosts = (props) => {
     });
 
     return (
-        <ul style={{paddingTop:0}}>
+        // <ul style={{paddingTop:0}}>
+            <div>
             <h1 className="userPosts">My Posts</h1>
-            <div className="profile-list">
+            <div className="profile-list vertical-menu" id="slide1">
             {profileList}
             </div>
-        </ul>
+            </div>
+        // </ul>
     )
 
 };

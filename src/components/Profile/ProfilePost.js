@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+import './ProfilePost.css'
+
 // reference https://stackoverflow.com/questions/2013255/how-to-get-year-month-day-from-a-date-object
 let dateObj = new Date();
 let month = dateObj.getMonth() + 1; //months from 1-12
@@ -25,11 +27,11 @@ const ProfilePost = (props) => {
 
     return (
         <> 
-            <ul><strong><Link to={`/postdetail/${props.postId}`}>{props.title}</Link></strong>
-            <li>
+            <ul className="just-this" id="just-title"><strong><Link to={`/postdetail/${props.postId}`}>{props.title}</Link></strong>
+            <li className="list-item1">
                 {props.body}
             </li>
-            <li>
+            <li className="list-item1">
                 Created: {daysAgo} days ago
                
             </li>

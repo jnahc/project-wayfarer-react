@@ -1,0 +1,18 @@
+.just-this {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid purple;
+    border-top: 1px solid transparent;
+    border-radius: 8px;
+    background-color: #eee;
+  }
+/* 
+  #just-title:hover{
+    background-color: rgba(128,0,128, 0.4)
+  } */
+
+.list-item1{
+    margin-bottom: 5px;
+    margin-left: 15px;
+}

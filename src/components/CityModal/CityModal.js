@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
+import './CityModal.css'
+
 
 function CityModal (props) {
     const [show, setShow] = useState(false);
@@ -11,7 +13,7 @@ function CityModal (props) {
 
     return (
         <div>
-            <Button variant="warning" onClick={handleShow}>Create Post</Button>
+            <Button className="create-button" variant="warning" onClick={handleShow}>Create Post</Button>
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>

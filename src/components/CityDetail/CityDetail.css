@@ -30,3 +30,7 @@ h1 {
     height: 260px;
 }
 
+.country-name{
+  font-family: 'Calistoga', cursive;
+  margin-left: 255px;
+}
