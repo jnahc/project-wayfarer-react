@@ -4,13 +4,13 @@ const Profile = (props) => {
     console.log(props)
     if (!props.editProfile) {
         return (
-            <div style={{paddingTop:50}}>
-                <h1>{props.firstName}  {props.lastName}'s Profile</h1>
-                <img src={props.profilePhoto} alt=""/>
-                <p><strong>Email:</strong>{props.profile.email}</p>
-                <p><strong>Current City:</strong>{props.currentCity && props.currentCity}</p>
-                <p><strong>Date Join:</strong> {props.profile.dateJoined && props.profile.dateJoined}</p>
-                <button className="btn-warning1" onClick={() => props.onEdit()}>Edit</button>
+            <div className="profile-border" style={{paddingTop:50}}>
+                <h1 className="userName">{props.firstName}  {props.lastName}'s Profile</h1>
+                <img className="profile-image" src={props.profilePhoto} alt=""/>
+                <p><strong>Email: </strong>{props.profile.email}</p>
+                <p><strong>Current City: </strong>{props.currentCity && props.currentCity}</p>
+                <p><strong>Date Joined: </strong> {props.profile.dateJoined && props.profile.dateJoined}</p>
+                <button className="btn-warning1 editButton" onClick={() => props.onEdit()}>Edit</button>
             </div>
         )
     } else {

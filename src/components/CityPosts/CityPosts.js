@@ -22,7 +22,9 @@ const CityPosts = (props) => {
   return (
     <ul style={{paddingTop:50}}>
       <h1>City Posts</h1>
+      <div className="city-list">
       {cityList}
+      </div>
     </ul>
   )
 };
