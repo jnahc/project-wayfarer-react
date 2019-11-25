@@ -4,7 +4,7 @@ import CityPost from '../CityPost/CityPost';
 
 const CityPosts = (props) => {
   // console.log('CityPosts.js', props.posts)
-  let sortedCityPostList = props.posts.sort((a,b) => a.dateCreated - b.dateCreated).reverse();
+  let sortedCityPostList = props.posts.slice().sort((a,b) => a.dateCreated - b.dateCreated).reverse();
   //CREDITS TO https://stackoverflow.com/questions/10123953/how-to-sort-an-array-by-a-date-property
   let cityList = sortedCityPostList.map((post) => {
     return (

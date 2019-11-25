@@ -3,8 +3,8 @@ import ProfilePost from './ProfilePost'
 
 const ProfilePosts = (props) => {
     // console.log(props.posts)
-    let sortedProfilePostList = props.posts.sort((a,b) => a.dateCreated - b.dateCreated).reverse()
-    let profileList = sortedProfilePostList.map((post) => {
+    let sortedProfilePostList = props.posts.slice().sort((a,b) => a.dateCreated - b.dateCreated).reverse();
+    const profileList = sortedProfilePostList.map((post) => {
         return (
             <ProfilePost 
                 key={post._id}
