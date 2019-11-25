@@ -25,16 +25,76 @@ const PostDetail = (props) => {
     let thisPost = `${props.post.dateCreated}`.toLocaleString().substring(0, 10);
     let daysAgo = datediff(parseDate(thisPost), parseDate(today));
 
-    return (
-        <div className="post-detail"> 
-        <h2 className="post-title">{props.post.title}</h2>
-        <h4>Author: {props.postAuthor.firstName} {props.postAuthor.lastName}</h4>
-        <p>Created: {daysAgo} days ago</p>
-        <p>City: {props.city.name}</p>
-        <p>Country: {props.city.country}</p>
-        <p>{props.post.body}</p>
+    if (!props.editPost) {
+        return (
+            <div className="post-detail"> 
+            <h2 className="post-title">{props.title}</h2>
+            <h4>Author: {props.postAuthor.firstName} {props.postAuthor.lastName}</h4>
+            <p>Created: {daysAgo} days ago</p>
+            <p>City: {props.city.name}</p>
+            <p>Country: {props.city.country}</p>
+            <p>{props.body}</p>
+            <button className="btn-warning1 editButton" onClick={() => props.onEdit()}>Edit</button>
         </div>
-    )
+
+        )
+    } else {
+        return (
+            <div className="post-detail">
+            <h1 className="mb-3">Edit Post</h1>
+                <form onSubmit={props.handleSubmit}>
+                    <div className="form-group">
+                        <label htmlFor="title">Title</label>
+                        <input onChange={props.handleChange} className="form-control form-control-lg" type="text" id="title" name="title" value={props.title}  />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="photoUrl">Post Photo URL</label>
+                        <input onChange={props.handleChange} className="form-control form-control-lg" type="text" id="photoUrl" name="photoUrl" value={props.photoUrl} />
+                    </div>
+                    <div className="form-group">
+                            <label htmlFor="body">Post:</label>
+                            <textarea onChange={props.handleChange} className="form-control form-control-lg" type="text" id="body" name="body" value={props.body} />
+                        </div>
+                    <button className="btn btn-primary" type="submit">Save</button>
+                </form>     
+            </div>  
+        )
+
+    }
+
+
+    // return (
+    //     <>
+        
+    //     <div className="post-detail"> 
+    //         <h2 className="post-title">{props.post.title}</h2>
+    //         <h4>Author: {props.postAuthor.firstName} {props.postAuthor.lastName}</h4>
+    //         <p>Created: {daysAgo} days ago</p>
+    //         <p>City: {props.city.name}</p>
+    //         <p>Country: {props.city.country}</p>
+    //         <p>{props.post.body}</p>
+    //         <button className="btn-warning1 editButton" onClick={() => props.onEdit()}>Edit</button>
+    //     </div>
+    //             <div className="post-detail">
+    //                 <h1 className="mb-3">Edit Post</h1>
+    //                 <form onSubmit={props.handleSubmit}>
+    //                     <div className="form-group">
+    //                         <label htmlFor="title">Title</label>
+    //                         <input onChange={props.handleChange} className="form-control form-control-lg" type="text" id="title" name="title" value={props.title}  />
+    //                     </div>
+    //                     <div className="form-group">
+    //                         <label htmlFor="photoUrl">Post Photo URL</label>
+    //                         <input onChange={props.handleChange} className="form-control form-control-lg" type="text" id="photoUrl" name="photoUrl" value={props.photoUrl} />
+    //                     </div>
+    //                     <div className="form-group">
+    //                             <label htmlFor="body">Post:</label>
+    //                             <textarea onChange={props.handleChange} className="form-control form-control-lg" type="text" id="body" name="body" value={props.body} />
+    //                         </div>
+    //                     <button className="btn btn-primary" type="submit">Save</button>
+    //                 </form>     
+    //             </div>  
+    //     </>        
+    // )
 
 };
 
