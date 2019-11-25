@@ -8,8 +8,15 @@ class CityModalContainer extends Component {
   state = {
     title: '',
     body: '',
-    cityId: '',
+    currentUser: '',
     author: '',
+  }
+
+  componentDidMount () {
+    this.setState({
+      currentUser: localStorage.getItem('uid'),
+      author: localStorage.getItem('uid')
+    })
   }
 
   handleChange = (event) => {
@@ -23,7 +30,7 @@ class CityModalContainer extends Component {
     event.preventDefault();
     console.log(this.state);
     // updated axios call
-    axios.post(`${process.env.REACT_APP_API_URL}/posts/${this.userId}/${this.cityId}`, this.state)
+    axios.post(`${process.env.REACT_APP_API_URL}/posts/${this.state.currentUser}/${this.props.cityId}`, this.state)
       .then((res) => {
         console.log(res);
       })
