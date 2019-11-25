@@ -19,22 +19,17 @@ const CityDetail = (props) => {
   if (props.cityInfo.cityName) {
     return (
       <>
-
-
-
-    
       <div className="cityHeader">
-        <h2>City - {props.cityInfo.cityName} </h2>
-        <h3>Country - {props.cityInfo.countryName}</h3>
+        <h1>{props.cityInfo.cityName} </h1>
+        <h4>{props.cityInfo.countryName}</h4>
         <div><img src={`${props.cityInfo.picture}`} /></div>
-  
       </div>
       </>
     )
   } else {
     return (
       <div>
-        City No Found.
+        City Not Found.
       </div>
     )
   }
