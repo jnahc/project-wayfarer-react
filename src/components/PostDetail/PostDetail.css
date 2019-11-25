@@ -1,0 +1,15 @@
+.post-detail{
+    border-radius: 25px;
+    border: 2px solid gold;
+    padding: 20px;
+    margin-top: 20px;
+    left: 20px;
+    right: 10px;
+    margin-left: 20px;
+    margin-right: 40px;
+    width: 500px;
+}
+
+.post-title{
+    font-family: 'Calistoga', cursive;
+}

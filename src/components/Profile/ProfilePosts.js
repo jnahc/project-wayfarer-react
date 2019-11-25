@@ -1,6 +1,8 @@
 import React from 'react';
 import ProfilePost from './ProfilePost'
 
+import './ProfilePosts.css'
+
 const ProfilePosts = (props) => {
     // console.log(props.posts)
     let sortedProfilePostList = props.posts.slice().sort((a,b) => a.dateCreated - b.dateCreated).reverse();
@@ -17,9 +19,11 @@ const ProfilePosts = (props) => {
     });
 
     return (
-        <ul style={{paddingTop:50}}>
-            <h1>My Posts</h1>
+        <ul style={{paddingTop:0}}>
+            <h1 className="userPosts">My Posts</h1>
+            <div className="profile-list">
             {profileList}
+            </div>
         </ul>
     )
 

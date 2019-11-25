@@ -1,0 +1,29 @@
+h1 {
+    margin-top: 10px;
+    font-family: 'Calistoga', cursive;
+}
+
+.userPosts{
+    border: 2px solid gold;
+    border-radius: 25px;
+}
+
+h1{
+    text-align: center;
+}
+
+.profile-list{
+    border: 2px solid purple;
+    border-radius: 25px;
+    width: 500px
+}
+
+a {
+    color: purple;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover{
+    color: purple
+}
