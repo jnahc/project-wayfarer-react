@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { withRouter } from 'react-router-dom';
 import CityModal from '../../CityModal/CityModal';
 import axios from 'axios';
 
@@ -36,7 +37,9 @@ class CityModalContainer extends Component {
     axios.post(`${process.env.REACT_APP_API_URL}/posts/${this.state.currentUser}/${this.props.cityId}`, this.state)
       .then((res) => {
         console.log(res);
-        window.location.reload();
+        // window.location.reload();
+        this.props.history.push('/profile')
+
       })
       .catch((err) => console.log(err));
       
@@ -49,5 +52,4 @@ class CityModalContainer extends Component {
   };
 }
 
-
-export default CityModalContainer;
+export default withRouter(CityModalContainer);

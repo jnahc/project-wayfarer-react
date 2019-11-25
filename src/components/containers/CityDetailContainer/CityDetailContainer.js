@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import CitySlideMenu from '../../CitySlideMenu/CitySlideMenu';
 import CityDetail from '../../CityDetail/CityDetail';
-import CityPosts from '../../CityPosts/CityPosts';
+// import CityPosts from '../../CityPosts/CityPosts';
 import CityModalContainer from '../CityModalContainer/CityModalContainer';
 import CityPostSlideMenu from '../../CityPostSlideMenu/CityPostSlideMenu';
 import axios from 'axios';
