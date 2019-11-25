@@ -87,19 +87,25 @@ class ProfileContainer extends Component {
         console.log(this.state);
         if (localStorage.getItem('uid')) {
             return (
-                <div>
-                <Profile 
-                    profile={this.state.profile}
-                    editProfile={this.state.editProfile}
-                    onEdit={this.onEdit}
-                    handleChange={this.handleChange}
-                    handleSubmit={this.handleSubmit}
-                    firstName={this.state.firstName}
-                    lastName={this.state.lastName}
-                    currentCity={this.state.currentCity}
-                    profilePhoto={this.state.profilePhoto}
-                    />
-                <ProfilePostsContainer />
+                <div className="container">
+                    <div className="row">
+                        <div className="col-sm">
+                        <Profile 
+                            profile={this.state.profile}
+                            editProfile={this.state.editProfile}
+                            onEdit={this.onEdit}
+                            handleChange={this.handleChange}
+                            handleSubmit={this.handleSubmit}
+                            firstName={this.state.firstName}
+                            lastName={this.state.lastName}
+                            currentCity={this.state.currentCity}
+                            profilePhoto={this.state.profilePhoto}
+                            />
+                        </div>
+                        <div className="col-sm">
+                            <ProfilePostsContainer />
+                        </div>
+                    </div>
                 </div>
 
             )
