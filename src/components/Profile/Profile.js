@@ -1,21 +1,25 @@
 import React from 'react';
 import './Profile.css'
+
 const Profile = (props) => {
-    console.log(props)
     if (!props.editProfile) {
         return (
             <div className="profile-border" style={{paddingTop:50}}>
-                <h1 className="userName">{props.firstName}  {props.lastName}'s Profile</h1>
-                <img className="profile-image" src={props.profilePhoto} alt="profile-pic"/>
+
+
+
+                <h1 className="userName" id="first-last-name-pro">{props.firstName}  {props.lastName}'s Profile</h1>
+                <img className="profile-image" src={props.profilePhoto} alt=""/>
                 <p><strong>Email: </strong>{props.profile.email}</p>
                 <p><strong>Current City: </strong>{props.currentCity && props.currentCity}</p>
                 <p><strong>Date Joined: </strong> {props.profile.dateJoined && props.profile.dateJoined.toLocaleString().substring(0, 10)}</p>
-                <button className="btn-warning1 editButton" onClick={() => props.onEdit()}>Edit</button>
+                <button id="edit-button1" className="btn-warning1 editButton" onClick={() => props.onEdit()}>Edit</button>
+
             </div>
         )
     } else {
         return ( 
-            <div style={{paddingTop:50}}>
+            <div style={{paddingTop:0}}>
                 <h1 className="mb-3">Edit Profile</h1>
                 <form onSubmit={props.handleSubmit}>
                     <div className="form-group">
@@ -34,10 +38,11 @@ const Profile = (props) => {
                         <label htmlFor="profilePhoto">Profile Photo URL</label>
                         <input onChange={props.handleChange} className="form-control form-control-lg" type="text" id="profilePhoto" name="profilePhoto" value={props.profilePhoto} />
                     </div>
-                    <button className="btn btn-primary" type="submit">Save</button>
+                    <button id="save-button" className="btn btn-primary" type="submit">Save</button>
                 </form>     
             </div>      
         )
     }
 };
+
 export default Profile;

@@ -16,10 +16,7 @@ class ProfileContainer extends Component {
         }
         this.onEdit = this.onEdit.bind(this);
         this.handleChange = this.handleChange.bind(this);
-    }
-
-
-  
+    }  
 
     componentDidMount() {
         const userId = localStorage.getItem('uid');
@@ -27,7 +24,6 @@ class ProfileContainer extends Component {
             withCredentials: true,
         })
          .then((res) => {
-             console.log(res);
              this.setState({
                  profile: res.data.data,
                  firstName: res.data.data.firstName,
@@ -40,15 +36,12 @@ class ProfileContainer extends Component {
     }
 
     onEdit() {
-        console.log('getting to edit form')
-
         this.setState({
             editProfile: true,
         })
     }
 
     handleChange (event) {
-        console.log(event.target.value)
         this.setState({
             [event.target.name]: event.target.value
         })
@@ -56,18 +49,14 @@ class ProfileContainer extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        const userId = localStorage.getItem('uid');
-        
-        console.log(this.state);
+        const userId = localStorage.getItem('uid');        
         let newObj = Object.assign({}, this.state);
         delete newObj.profile;
         delete newObj.editProfile;
-        console.log(newObj)
         axios.put(`${process.env.REACT_APP_API_URL}/users/${userId}`, newObj, {
             withCredentials: true,
         })
             .then((res) => {
-                console.log(res);
                 this.props.setCurrentUser(res.data.data);
                 this.props.history.push('/profile');
 
@@ -75,16 +64,10 @@ class ProfileContainer extends Component {
             .catch((err) => console.log(err));
             this.setState({
                 editProfile: false,
-            })
-    
-    }
-
-
-
-    // updateProfile = (updatedProfile) => {}
+            });  
+    };
 
     render () {
-        console.log(this.state);
         if (localStorage.getItem('uid')) {
             return (
                 <div className="container">
@@ -107,19 +90,15 @@ class ProfileContainer extends Component {
                         </div>
                     </div>
                 </div>
-
-            )
-            
+            )            
         } else {
             return (
                 <>
                 Please register or login to access to your profile.
                 </>
             )
-        }
- 
-
-    }
-}
+        };
+    };
+};
 
 export default ProfileContainer;

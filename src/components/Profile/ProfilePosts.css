@@ -4,31 +4,13 @@ h1 {
 }
 
 .userPosts{
-    border: 2px solid gold;
-    border-radius: 25px;
+    text-shadow: 1px 1px 3px purple;
+
 }
 
 h1{
     text-align: center;
 }
-
-/* .profile-list{
-    border: 2px solid purple;
-    border-radius: 25px;
-    width: 500px;
-    margin-top: 15px
-} */
-/* 
-a {
-    color: purple;
-    text-decoration: none;
-    background-color: transparent;
-} */
-
-/* a:hover{
-    color: purple
-} */
-
 
 .vertical-menu {
     width: 200px;
@@ -37,11 +19,9 @@ a {
 }
 
 #slide1{
-
     width: 500px;
     height: 500px;
     margin-top: 20px;
-
 }
 
 #slide1 a {
@@ -52,8 +32,7 @@ a {
     border-bottom: 1px solid transparent;
     border-right: transparent;
     border-left: transparent;
-    background-color: #eee;
-    
+    background-color: #eee;    
 }
 
 #slide1 a:hover{

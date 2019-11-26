@@ -28,6 +28,7 @@
 
 .form-control {
     display: block;
+    width: 200px !important;
     font-weight: 400;
     color: purple;
     background-color: #fff;
@@ -35,3 +36,8 @@
     border: 1px solid #ced4da;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+
+#login-button{
+    box-shadow: 2px 2px 3px grey;
+}
+

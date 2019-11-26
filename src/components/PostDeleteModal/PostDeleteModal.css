@@ -1,0 +1,29 @@
+#confirm-delete{
+    transform: translate(-90px, 43px);
+    margin-left: 10px;
+    box-shadow: 1px 1px 3px grey;
+}
+#confirm-delete:hover{
+    background-color: transparent;
+    border: 1px solid purple
+}
+
+#cancel-button{
+    transform: translate(-0px, 5px);
+    margin-left: 100px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 3px grey;
+}
+
+#cancel-button:hover{
+    background-color: transparent;
+    border: 1px solid purple
+}
+
+.delete-this{
+    box-shadow: 1px 1px 3px grey;
+}
+
+#are-u-sure{
+    margin: 10;
+}

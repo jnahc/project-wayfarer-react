@@ -17,3 +17,7 @@
 .cities-word{
     text-align: left;
 }
+
+#the-word-cities{
+    text-shadow: 1px 1px 3px purple;
+}

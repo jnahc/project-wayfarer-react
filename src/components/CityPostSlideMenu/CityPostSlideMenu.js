@@ -1,10 +1,6 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-// import CitySlideCity from './CitySlideCity';
 import CityPost from '../CityPost/CityPost';
 import './CityPostSlideMenu.css';
-
-
 
 const CityPostSlideMenu = (props) => {
   let sortedCityPostList = props.posts.slice().sort((a,b) => a.dateCreated - b.dateCreated).reverse();
@@ -14,7 +10,6 @@ const CityPostSlideMenu = (props) => {
             key={post._id}
             postId={post._id}
             title={post.title}
-            // body={post.body.slice(0,200)}
             body={post.body.length > 200? post.body.slice(0,200) + '.........': post.body}
             photoUrl={post.photoUrl}
             dateCreated={post.dateCreated.toLocaleString('en-US')}
@@ -23,13 +18,12 @@ const CityPostSlideMenu = (props) => {
 });
     return (
       <div className="postSlideContainer"> 
-        <h3>Posts</h3>
+        <h3 id="the-word-posts">Posts</h3>
         <div className="vertical-menu" id="postSlide">     
           {postlist}
         </div>
       </div>
     )
-
 };
 
 export default CityPostSlideMenu;

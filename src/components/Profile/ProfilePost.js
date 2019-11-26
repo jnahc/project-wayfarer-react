@@ -9,7 +9,6 @@ let month = dateObj.getUTCMonth() + 1; //months from 1-12
 let day = dateObj.getUTCDate();
 let year = dateObj.getFullYear();
 let today = year + "-" + month + "-" + day;
-console.log(today)
 
 function parseDate(mgDate) {
     let postDay = mgDate.split('-');
@@ -21,7 +20,6 @@ function datediff(postDate, today) {
 }
 
 const ProfilePost = (props) => {
-
     let thisPost = props.dateCreated.toLocaleString().substring(0, 10)
     let daysAgo = datediff(parseDate(thisPost), parseDate(today));
 
@@ -47,14 +45,16 @@ const ProfilePost = (props) => {
                 Published: {daysAgo} days ago 
                 </div>
             </li>
-            {/* <li className="list-item1" >
-                Published: {daysAgo} days ago   
-            </li> */}
+
+
+            <li className="list-item1">
+                Published: {daysAgo} days ago               
+            </li>
+
             </ul>
             <br></br>
         </>
-    )
-
+    );
 };
 
 export default ProfilePost;
