@@ -8,6 +8,7 @@
     margin-left: 20px;
     margin-right: 40px;
     width: 95%;
+    height: 800px;
 }
 
 .post-title{
@@ -28,6 +29,7 @@ p {
 #edit-button{
     box-shadow: 2px 2px 3px grey;
     transform: translate(150px, 35px);
+
     padding: 5px;
     width: 50px;
     height: 35px;
