@@ -31,7 +31,6 @@ const PostDetail = (props) => {
         return (
             <>
             <div className="post-detail"> 
-
                 <h2 className="post-title">{props.title}</h2>
                 <h4>Author: {props.postAuthor.firstName} {props.postAuthor.lastName}</h4>
                 <p>Created: {daysAgo} days ago</p>
