@@ -27,14 +27,29 @@ const ProfilePost = (props) => {
 
     return (
         <> 
-            <ul className="just-this" id="just-title"><strong><Link to={`/postdetail/${props.postId}`}>{props.title}</Link></strong>
+            <ul className="just-this" id="just-title">
+                <strong>
+                    {/* <Link to={`/postdetail/${props.postId}`}>{props.title}</Link> */}
+                    
+                    <a href={`/postdetail/${props.postId}`}>
+                        <img src={`${props.photoUrl}`} alt="post-pic"/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+
+                        {props.title}
+                    </a>
+                </strong>
             <li className="list-item1">
                 {props.body}
+                <div>
+                &nbsp;
+                </div>
+                <div id="publishday">
+                Published: {daysAgo} days ago 
+                </div>
             </li>
-            <li className="list-item1">
-                Created: {daysAgo} days ago
-               
-            </li>
+            {/* <li className="list-item1" >
+                Published: {daysAgo} days ago   
+            </li> */}
             </ul>
             <br></br>
         </>
