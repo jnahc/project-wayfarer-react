@@ -26,9 +26,7 @@ const ProfilePost = (props) => {
     return (
         <> 
             <ul className="just-this" id="just-title">
-                <strong>
-                    {/* <Link to={`/postdetail/${props.postId}`}>{props.title}</Link> */}
-                    
+                <strong>                    
                     <a href={`/postdetail/${props.postId}`}>
                         <img className="postpic" src={`${props.photoUrl}`} alt="post-pic"/>
                         &nbsp;&nbsp;&nbsp;&nbsp;
