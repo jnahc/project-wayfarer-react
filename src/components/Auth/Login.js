@@ -18,7 +18,7 @@ class Login extends Component {
     handleSubmit = (event) => {
         // console.log(event)
         event.preventDefault();
-        axios.post(`${process.env.REACT_APP_API_URL}/auth/login`, this.state, {
+        axios.post(`${REACT_APP_API_URL}/auth/login`, this.state, {
             withCredentials: true,
         })
           .then((res) => {
