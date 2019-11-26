@@ -1,5 +1,4 @@
 import React from 'react';
-// import {Link} from 'react-router-dom';
 import './CityPost.css';
 
 // reference https://stackoverflow.com/questions/2013255/how-to-get-year-month-day-from-a-date-object
@@ -26,35 +25,21 @@ const CityPost = (props) => {
 
     return (
         <> 
-            {/* <ul><strong><Link to={`/postdetail/${props.postId}`}>{props.title}</Link></strong>
-            
-            <li>
-                {props.body}
-            </li>
-            <li>
-                Created: {daysAgo} days ago
-            </li>
-            </ul>
-            <br></br> */}
             <a href={`/postdetail/${props.postId}`}>
-            <img src={`${props.photoUrl}`} alt="city" className="cityPostImg" />
-            <span className="postTitle">
-                {props.title}
-            </span>
-            
-            <div className="postContent">
-                {props.body}
-            </div>
-            
-            
-             {' '}
-            <span>{props.city}</span>
-
-
-        </a>
+                <img src={`${props.photoUrl}`} alt="city" className="cityPostImg" />
+                <span className="postTitle">
+                    {props.title}
+                </span>
+                
+                <div className="postContent">
+                    {props.body}
+                </div>            
+                
+                {' '}
+                <span>{props.city}</span>
+            </a>
         </>
     )
-
 };
 
 export default CityPost;

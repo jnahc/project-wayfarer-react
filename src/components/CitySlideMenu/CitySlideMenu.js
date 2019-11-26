@@ -3,8 +3,6 @@ import React from 'react';
 import CitySlideCity from './CitySlideCity';
 import './CitySlideMenu.css';
 
-
-
 const CitySlideMenu = (props) => {
 
   const list = props.citiesList.map((city) => {
@@ -24,8 +22,7 @@ const CitySlideMenu = (props) => {
           {list}
         </div>
       </div>
-    )
-
+    );
 };
 
 export default CitySlideMenu;

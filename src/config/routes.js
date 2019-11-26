@@ -5,13 +5,11 @@ import ProfileContainer from '../components/containers/ProfileContainer/ProfileC
 import PostDetailContainer from '../components/containers/PostDetailContainer/PostDetailContainer';
 import CityDetailContainer from '../components/containers/CityDetailContainer/CityDetailContainer';
 
-
 export default () => 
 (
   <Switch >
     <Route exact path="/" component={Home} />   
     <Route path='/profile' component={ProfileContainer} />
-    {/* <Route path='/logout' render={() => <Login currentUser={currentUser} setCurrentUser={setCurrentUser} />} /> */}
     <Route path='/postdetail/:id' component={PostDetailContainer} />
     <Route path='/cities/:cityName' component={CityDetailContainer}  />
   </Switch>
