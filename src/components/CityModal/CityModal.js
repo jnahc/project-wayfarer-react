@@ -4,17 +4,14 @@ import Button from 'react-bootstrap/Button';
 
 import './CityModal.css'
 
-
 function CityModal (props) {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-
     return (
         <div>
             <Button className="create-button" variant="warning" onClick={handleShow}>Create Post</Button>
-
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Create New Post</Modal.Title>
@@ -40,14 +37,7 @@ function CityModal (props) {
                 </Modal.Body>
             </Modal>
         </div>
-    )
+    );
 }
-
-// updated id, name, value fields
-// added submit form function
-// moved CityModal to new folder
-// updated linking structure from CityDetailContainer>CityModalContainer>CityModal
-// Updated Ccasing of Modals
-// updated value properties on form
 
 export default CityModal;

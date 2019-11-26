@@ -12,7 +12,6 @@ class ProfilePostsContainer extends React.Component {
             withCredentials: true,
         })
          .then((res) => {
-            //  console.log(res);
              this.setState({
                  posts: res.data.posts
              });
@@ -24,9 +23,8 @@ class ProfilePostsContainer extends React.Component {
             <div style={{float:"left"}}>
                 <ProfilePosts posts={this.state.posts}/>
             </div>        
-        )
-    }
-
-}
+        );
+    };
+};
 
 export default ProfilePostsContainer;

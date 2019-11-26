@@ -10,17 +10,11 @@ class PostDeleteContainer extends React.Component {
     event.preventDefault();
     axios.delete(`${process.env.REACT_APP_API_URL}/posts/${window.location.pathname.split('/')[2]}`)
       .then(res => {
-        console.log(res);
-        // this.props.history.goBack();
         this.props.history.push('/profile');
-        // window.location.reload();
-
       })
   }
 
   render () {
-    console.log('post detail id', window.location.pathname.split('/')[2])
-
     return (
       <div>
         <PostDeleteModal handleSubmit={this.handleSubmit} />

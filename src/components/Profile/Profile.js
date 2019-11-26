@@ -1,7 +1,7 @@
 import React from 'react';
 import './Profile.css'
+
 const Profile = (props) => {
-    console.log(props)
     if (!props.editProfile) {
         return (
             <div className="profile-border" style={{paddingTop:50}}>
@@ -40,4 +40,5 @@ const Profile = (props) => {
         )
     }
 };
+
 export default Profile;

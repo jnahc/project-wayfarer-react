@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import RegisterModal from "./RegisterModal";
 import axios from 'axios';
 
-
 class Register extends Component {
   state = {
     firstName: '',

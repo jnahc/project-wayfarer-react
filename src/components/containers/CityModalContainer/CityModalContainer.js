@@ -3,9 +3,7 @@ import { withRouter } from 'react-router-dom';
 import CityModal from '../../CityModal/CityModal';
 import axios from 'axios';
 
-
 class CityModalContainer extends Component {
-  //updated state keys
   state = {
     title: '',
     body: '',
@@ -23,7 +21,6 @@ class CityModalContainer extends Component {
   }
 
   handleChange = (event) => {
-    // console.log(event);
     this.setState({
       [event.target.name]: event.target.value,
       city: this.props.cityObjId,
@@ -33,16 +30,11 @@ class CityModalContainer extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     console.log(this.state);
-    // updated axios call
     axios.post(`${process.env.REACT_APP_API_URL}/posts/${this.state.currentUser}/${this.props.cityId}`, this.state)
       .then((res) => {
-        console.log(res);
-        // window.location.reload();
         this.props.history.push('/profile')
-
       })
-      .catch((err) => console.log(err));
-      
+      .catch((err) => console.log(err));      
   }
 
   render() {

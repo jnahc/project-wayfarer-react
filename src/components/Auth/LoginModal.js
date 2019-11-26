@@ -4,7 +4,6 @@ import Button from 'react-bootstrap/Button';
 
 import './LoginModal.css'
 
-
 function LoginModal (props) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -15,7 +14,6 @@ function LoginModal (props) {
       <Button variant="warning" onClick={handleShow}>
         Login
       </Button>
-
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Login</Modal.Title>
