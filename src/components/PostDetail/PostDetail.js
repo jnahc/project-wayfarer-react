@@ -30,18 +30,17 @@ const PostDetail = (props) => {
     if (!props.editPost && postAuthorId === currentUserId ) {
         return (
             <div className="post-detail"> 
-
-                <h2 className="post-title">{props.title}</h2>
+                <h2 className="post-title">{props.title}  <button className="btn-warning1 editButton mt-5 " onClick={() => props.onEdit()}>Edit</button><PostDeleteContainer /></h2>
                 <h4>Author: {props.postAuthor.firstName} {props.postAuthor.lastName}</h4>
                 <p>Created: {daysAgo} days ago</p>
                 <p>City: {props.city.name}</p>
                 <p>Country: {props.city.country}</p>
                 <p>{props.body}</p>
-                <button className="btn-warning1 editButton" onClick={() => props.onEdit()}>Edit</button>
-                <PostDeleteContainer />
+                <div className="row">
+                    
+                </div>
             </div>
-
-        )
+        );
     } else if (!props.editPost && postAuthorId !== currentUserId) {
         return (
             <div className="post-detail"> 

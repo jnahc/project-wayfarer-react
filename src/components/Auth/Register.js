@@ -10,6 +10,7 @@ class Register extends Component {
     currentCity: '',
     password: '',
     password2: '',
+    profilePhoto: 'https://s.pngix.com/pngfile/s/468-4685538_bear-default-avatar-default-avatar-hd-png-download.png',
     // emailDup: false,
   }
 

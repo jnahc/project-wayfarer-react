@@ -22,6 +22,9 @@
 
 .delete-this{
     box-shadow: 1px 1px 3px grey;
+    margin-left: 60%;
+    /* margin-right: 10px; */
+    margin-bottom: 15px;
 }
 
 #are-u-sure{

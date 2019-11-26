@@ -51,6 +51,10 @@ function RegisterModal(props) {
                     <label htmlFor="password2">Confirm Password</label>
                     <input onChange={props.handleChange} className="form-control form-control-lg" type="password" id="password2" name="password2" value={props.user.password2} />
                   </div>
+                  {/* <div className="form-group" style={{display:'none'}}>
+                    <label htmlFor="photoUrl">Photo</label>
+                    <input onChange={props.handleChange} className="form-control form-control-lg" type="text" id="photoUrl" name="photoUrl" value="https://s.pngix.com/pngfile/s/468-4685538_bear-default-avatar-default-avatar-hd-png-download.png" />
+                  </div> */}
 
 
                   <button id="register-button" onClick={handleClose} className="btn btn-primary" type="submit">Register</button>
