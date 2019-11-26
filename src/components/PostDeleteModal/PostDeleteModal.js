@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 function PostDeleteModal (props) {
   const [show, setShow] = useState(false);
