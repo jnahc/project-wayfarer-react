@@ -28,6 +28,7 @@ const PostDetail = (props) => {
 
     if (!props.editPost && postAuthorId === currentUserId ) {
         return (
+            <>
             <div className="post-detail"> 
 
                 <h2 className="post-title">{props.title}</h2>
@@ -36,9 +37,10 @@ const PostDetail = (props) => {
                 <p>City: {props.city.name}</p>
                 <p>Country: {props.city.country}</p>
                 <p>{props.body}</p>
-                <button className="btn-warning1 editButton" onClick={() => props.onEdit()}>Edit</button>
+                <button className="btn-warning1 edit-button987" onClick={() => props.onEdit()}>Edit</button>
                 <PostDeleteContainer />
             </div>
+            </>
 
         )
     } else if (!props.editPost && postAuthorId !== currentUserId) {
