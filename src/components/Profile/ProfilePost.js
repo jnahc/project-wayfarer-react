@@ -46,11 +46,6 @@ const ProfilePost = (props) => {
                 </div>
             </li>
 
-
-            <li className="list-item1">
-                Published: {daysAgo} days ago               
-            </li>
-
             </ul>
             <br></br>
         </>
