@@ -1,0 +1,11 @@
+img {
+    width: 100px;
+    height: 70px;
+}
+
+img span {
+    padding: 20px;
+}
+.city-name{
+    margin-left: 20px;
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import Routes from './config/routes';
 import Navbar from './components/Navbar/Navbar';
+// import Register from './components/Auth/Register'
 import axios from 'axios'
 
 import './App.css';
@@ -22,7 +23,7 @@ class App extends Component {
         console.log(res);
         localStorage.removeItem('uid');
         this.setState({ currentUser: null });
-        this.props.history.push('/login');
+        this.props.history.push('/');
       })
       .catch(err => console.log(err));
   }
@@ -30,9 +31,9 @@ class App extends Component {
   render () {
     return (
       <>
-        <Navbar currentUser={this.state.currentUser} logout={this.logout}/>
+        <Navbar currentUser={this.state.currentUser} setCurrentUser={this.setCurrentUser} logout={this.logout}/>
         {/* {routes} */}
-        <Routes currentUser={this.state.setCurrentUser} setCurrentUser={this.setCurrentUser} />
+        <Routes currentUser={this.state.setCurrentUser}  />
       </>
     );
   }
