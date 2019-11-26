@@ -31,12 +31,13 @@ const PostDetail = (props) => {
         return (
             <>
             <div className="post-detail"> 
-                <h2 className="post-title">{props.title}</h2>
+                <h2 className="post-title">{props.title}{' '}<img className="" src={`${props.photoUrl}`} alt="post-pic"/></h2>
                 <h4>Author: {props.postAuthor.firstName} {props.postAuthor.lastName}</h4>
                 <p>Created: {daysAgo} days ago</p>
                 <p>City: {props.city.name}</p>
                 <p>Country: {props.city.country}</p>
                 <p>{props.body}</p>
+
                 <button className="btn-warning1 edit-button987" onClick={() => props.onEdit()}>Edit</button>
                 <PostDeleteContainer />
             </div>
@@ -51,7 +52,8 @@ const PostDetail = (props) => {
                 <p>Created: {daysAgo} days ago</p>
                 <p>City: {props.city.name}</p>
                 <p>Country: {props.city.country}</p>
-                <p>{props.body}</p>
+                <img className="" src={`${props.city.photoUrl}`} alt="post-pic"/>
+                
             </div>
 
 
