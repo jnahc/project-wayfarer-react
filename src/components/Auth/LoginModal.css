@@ -28,7 +28,7 @@
 
 .form-control {
     display: block;
-    width: 200px !important;
+    width: 100% !important;
     font-weight: 400;
     color: purple;
     background-color: #fff;
