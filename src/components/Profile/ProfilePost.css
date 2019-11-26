@@ -7,12 +7,8 @@
     border-radius: 8px;
     background-color: #eee;
   }
-/* 
-  #just-title:hover{
-    background-color: rgba(128,0,128, 0.4)
-  } */
 
-.list-item1{
+.list-item1 {
     margin-bottom: 5px;
     margin-left: 15px;
 }

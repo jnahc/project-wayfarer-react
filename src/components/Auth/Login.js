@@ -48,8 +48,8 @@ class Login extends Component {
                     </div>
                 </div>
             </div>
-        )
-    }
+        );
+    };
 };
 
 export default withRouter(Login);
