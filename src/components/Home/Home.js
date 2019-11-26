@@ -39,15 +39,15 @@ const Home = () => (
 
   <h2 className="header-text">Wayfarer is...</h2>
   <div className="row heading-topics">
-    <div className="col-md-3 topic1">
+    <div className="col-md-3 topic1" id="the-word-topic">
       <h2>Topic</h2>
       <p className="break-para">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     </div>
-    <div className="col-md-3 topic2">
+    <div className="col-md-3 topic2" id="the-word-topic">
       <h2>Topic</h2>
       <p className="break-para">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     </div>
-    <div className="col-md-3 topic3">
+    <div className="col-md-3 topic3" id="the-word-topic">
       <h2>Topic</h2>
       <p className="break-para">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     </div>

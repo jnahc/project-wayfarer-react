@@ -31,7 +31,7 @@ function CityModal (props) {
                                 <label htmlFor="photoUrl">Post:</label>
                                 <textarea onChange={props.handleChange} className="form-control form-control-lg" type="text" id="body" name="body" value={props.post.body} />
                             </div>
-                            <button onClick={handleClose} className="btn btn-primary float-right" type="submit">Save Changes</button>
+                            <button id="save-button" onClick={handleClose} className="btn btn-primary float-right" type="submit">Save Changes</button>
                         </form>
                     </div>
                 </Modal.Body>

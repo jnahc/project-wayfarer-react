@@ -4,8 +4,8 @@ h1 {
 }
 
 .userPosts{
-    border: 2px solid gold;
-    border-radius: 25px;
+    text-shadow: 1px 1px 3px purple;
+
 }
 
 h1{

@@ -18,3 +18,7 @@ h3{
     font-family: 'Calistoga', cursive;
     text-align: center;
 }
+
+#the-word-posts{
+    text-shadow: 1px 1px 3px purple;
+}
