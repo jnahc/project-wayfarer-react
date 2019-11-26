@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from "react-bootstrap/Button";
 
-function RegisterModal(props) {
+const RegisterModal = (props) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
 
   return (
     <>
@@ -46,7 +47,7 @@ function RegisterModal(props) {
                     <label htmlFor="password2">Confirm Password</label>
                     <input onChange={props.handleChange} className="form-control form-control-lg" type="password" id="password2" name="password2" value={props.user.password2} />
                   </div>
-                  <button onClick={handleClose} className="btn btn-primary" type="submit">Register</button>
+                  <button onClick={props.emailDup? handleShow:handleClose} className="btn btn-primary" type="submit">Register</button>
                 </form>
               </div>
             </div>
