@@ -32,7 +32,7 @@ const ProfilePost = (props) => {
                     {/* <Link to={`/postdetail/${props.postId}`}>{props.title}</Link> */}
                     
                     <a href={`/postdetail/${props.postId}`}>
-                        <img src={`${props.photoUrl}`} alt="post-pic"/>
+                        <img className="postpic" src={`${props.photoUrl}`} alt="post-pic"/>
                         &nbsp;&nbsp;&nbsp;&nbsp;
 
                         {props.title}
