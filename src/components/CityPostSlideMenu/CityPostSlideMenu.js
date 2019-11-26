@@ -23,7 +23,7 @@ const CityPostSlideMenu = (props) => {
 });
     return (
       <div className="postSlideContainer"> 
-        <h3>Posts</h3>
+        <h3 id="the-word-posts">Posts</h3>
         <div className="vertical-menu" id="postSlide">     
           {postlist}
         </div>

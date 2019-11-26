@@ -3,6 +3,8 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 // import { Link } from 'react-router-dom';
 
+import './PostDeleteModal.css'
+
 function PostDeleteModal (props) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -10,7 +12,7 @@ function PostDeleteModal (props) {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button className="delete-this" variant="primary" onClick={handleShow}>
         Delete this post
       </Button>
 
@@ -23,9 +25,9 @@ function PostDeleteModal (props) {
             <div className="row">
               <div className="col-md-4 offset-md-4">
                 <form onSubmit={props.handleSubmit}>
-                  Are you sure you want to delete this post?
-                  <button onClick={handleClose} className="btn btn-primary" type="submit">Delete</button>
-                  <div onClick={handleClose} className="btn btn-primary">Cancel</div>
+                  <span id="are-u-sure">Are you sure you want to delete this post?</span>
+                  <button id="confirm-delete" onClick={handleClose} className="btn btn-primary" type="submit">Delete</button>
+                  <div id="cancel-button" onClick={handleClose} className="btn btn-primary">Cancel</div>
                 </form>
               </div>
             </div>

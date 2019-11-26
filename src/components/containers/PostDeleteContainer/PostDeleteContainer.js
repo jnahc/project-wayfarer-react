@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import PostDeleteModal from '../../PostDeleteModal/PostDeleteModal'
 import axios from 'axios';
 
+
 class PostDeleteContainer extends React.Component {
 
   handleSubmit = (event) => {
@@ -22,7 +23,6 @@ class PostDeleteContainer extends React.Component {
 
     return (
       <div>
-        This is the post delete container.
         <PostDeleteModal handleSubmit={this.handleSubmit} />
       </div>
     )
