@@ -6,9 +6,24 @@
     border-top: 1px solid transparent;
     border-radius: 8px;
     background-color: #eee;
+    height: 230px;
   }
+
 
 .list-item1 {
     margin-bottom: 5px;
     margin-left: 15px;
+    font-size: 12px;
 }
+
+#publishday {
+  float:right;
+  margin-right: 15px;
+}
+
+.postpic {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+

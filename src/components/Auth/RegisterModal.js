@@ -4,10 +4,13 @@ import Button from "react-bootstrap/Button";
 
 
 
+
 function RegisterModal(props) {
+
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
 
   return (
     <>
@@ -48,7 +51,10 @@ function RegisterModal(props) {
                     <label htmlFor="password2">Confirm Password</label>
                     <input onChange={props.handleChange} className="form-control form-control-lg" type="password" id="password2" name="password2" value={props.user.password2} />
                   </div>
+
+
                   <button id="register-button" onClick={handleClose} className="btn btn-primary" type="submit">Register</button>
+
                 </form>
               </div>
             </div>

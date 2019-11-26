@@ -11,7 +11,8 @@ const ProfilePosts = (props) => {
                 key={post._id}
                 postId={post._id}
                 title={post.title}
-                body={post.body.slice(0,50)}
+                body={post.body.length > 200? post.body.slice(0,200) + '.........': post.body}
+                photoUrl={post.photoUrl}
                 dateCreated={post.dateCreated}
             />
         );

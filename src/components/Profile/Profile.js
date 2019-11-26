@@ -5,12 +5,16 @@ const Profile = (props) => {
     if (!props.editProfile) {
         return (
             <div className="profile-border" style={{paddingTop:50}}>
+
+
+
                 <h1 className="userName" id="first-last-name-pro">{props.firstName}  {props.lastName}'s Profile</h1>
                 <img className="profile-image" src={props.profilePhoto} alt=""/>
                 <p><strong>Email: </strong>{props.profile.email}</p>
                 <p><strong>Current City: </strong>{props.currentCity && props.currentCity}</p>
-                <p><strong>Date Joined: </strong> {props.profile.dateJoined && props.profile.dateJoined}</p>
+                <p><strong>Date Joined: </strong> {props.profile.dateJoined && props.profile.dateJoined.toLocaleString().substring(0, 10)}</p>
                 <button id="edit-button1" className="btn-warning1 editButton" onClick={() => props.onEdit()}>Edit</button>
+
             </div>
         )
     } else {

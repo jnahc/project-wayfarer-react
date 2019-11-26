@@ -5,8 +5,8 @@ import './PostDetail.css';
 
 // reference https://stackoverflow.com/questions/2013255/how-to-get-year-month-day-from-a-date-object
 let dateObj = new Date();
-let month = dateObj.getMonth() + 1; //months from 1-12
-let day = dateObj.getDate();
+let month = dateObj.getUTCMonth() + 1; //months from 1-12
+let day = dateObj.getUTCDate();
 let year = dateObj.getFullYear();
 let today = year + "-" + month + "-" + day;
 
@@ -23,21 +23,40 @@ const PostDetail = (props) => {
 
     let thisPost = `${props.post.dateCreated}`.toLocaleString().substring(0, 10);
     let daysAgo = datediff(parseDate(thisPost), parseDate(today));
+    let postAuthorId = props.postAuthor._id;
+    let currentUserId = localStorage.getItem('uid')
 
-    if (!props.editPost) {
+    if (!props.editPost && postAuthorId === currentUserId ) {
         return (
             <div className="post-detail"> 
-            <h2 className="post-title" id="posts-deets1">{props.title}</h2>
-            <h4><span id="posts-deets">Author:</span> {props.postAuthor.firstName} {props.postAuthor.lastName}</h4>
-            <p><span id="posts-deets">Created:</span> <span id="cont1"> {daysAgo} days ago</span></p>
-            <p><span id="posts-deets">City:</span><span id="cont1"> {props.city.name}</span></p>
-            <p><span id="posts-deets">Country:</span><span id="cont1">  {props.city.country}</span></p>
-            <p><span id="cont2"> {props.body}</span></p>
-            <button className="btn-warning1" id="edit-button" onClick={() => props.onEdit()}>Edit</button>
-            <PostDeleteContainer />
-        </div>
+
+                <h2 className="post-title">{props.title}</h2>
+                <h4>Author: {props.postAuthor.firstName} {props.postAuthor.lastName}</h4>
+                <p>Created: {daysAgo} days ago</p>
+                <p>City: {props.city.name}</p>
+                <p>Country: {props.city.country}</p>
+                <p>{props.body}</p>
+                <button className="btn-warning1 editButton" onClick={() => props.onEdit()}>Edit</button>
+                <PostDeleteContainer />
+            </div>
+
         )
-    } else {
+    } else if (!props.editPost && postAuthorId !== currentUserId) {
+        return (
+            <div className="post-detail"> 
+                <h2 className="post-title">{props.title}</h2>
+                <h4>Author: {props.postAuthor.firstName} {props.postAuthor.lastName}</h4>
+                <p>Created: {daysAgo} days ago</p>
+                <p>City: {props.city.name}</p>
+                <p>Country: {props.city.country}</p>
+                <p>{props.body}</p>
+            </div>
+
+
+
+        )
+        
+    } else if (props.editPost && postAuthorId === currentUserId) {
         return (
             <div className="post-detail">
             <h1 className="mb-3" id="words-edit-post">Edit Post</h1>

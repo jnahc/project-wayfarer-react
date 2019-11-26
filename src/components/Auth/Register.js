@@ -10,6 +10,7 @@ class Register extends Component {
     currentCity: '',
     password: '',
     password2: '',
+    // emailDup: false,
   }
 
   handleChange = (event) => {
@@ -20,18 +21,22 @@ class Register extends Component {
   };
 
   handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(this.state);
-    axios.post(`${process.env.REACT_APP_API_URL}/auth/register`, this.state)
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => console.log(err));
+   
+      event.preventDefault();
+      console.log(this.state);
+      // let newObj = this.state
+      // delete newObj.emailDup
+
+      axios.post(`${process.env.REACT_APP_API_URL}/auth/register`, this.state)
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => console.log(err));
   }
 
   render() {
     return (
-     <RegisterModal handleChange={this.handleChange} handleSubmit={this.handleSubmit} user={this.state} />
+     <RegisterModal handleChange={this.handleChange} handleSubmit={this.handleSubmit} user={this.state} emailDup={this.state.emailDup}/>
     )
   };
 }
