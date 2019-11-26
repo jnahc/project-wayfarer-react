@@ -2,10 +2,7 @@ import React from 'react';
 import CityPost from '../CityPost/CityPost';
 import './CityPosts.css';
 
-
-
 const CityPosts = (props) => {
-  // console.log('CityPosts.js', props.posts)
   let sortedCityPostList = props.posts.slice().sort((a,b) => a.dateCreated - b.dateCreated).reverse();
   //CREDITS TO https://stackoverflow.com/questions/10123953/how-to-sort-an-array-by-a-date-property
   let cityList = sortedCityPostList.map((post) => {
@@ -21,12 +18,10 @@ const CityPosts = (props) => {
   })
 
   return (
-    // <ul style={{paddingTop:50}}>
     <>
       <h3>Posts</h3>
       {cityList}
     </>
-    // {/* // </ul> */}
   )
 };
 

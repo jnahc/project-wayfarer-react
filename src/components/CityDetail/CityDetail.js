@@ -1,21 +1,7 @@
 import React from 'react';
 import './CityDetail.css';
 
-
 const CityDetail = (props) => {
-  // let cityList = props.posts.map((post) => {
-  //   return (
-  //     <CityPost 
-  //       key={post._id}
-  //       postId={post._id}
-  //       cityName={post.name}
-  //       countryName={post.country}
-        
-  //     />
-
-  //   )
-
-  // })
 
   if (props.cityInfo.cityName) {
     return (
@@ -32,9 +18,8 @@ const CityDetail = (props) => {
       <div>
         City Not Found.
       </div>
-    )
-  
-  }
-}
+    );
+  };
+};
 
 export default CityDetail;
