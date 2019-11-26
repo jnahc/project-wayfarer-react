@@ -29,6 +29,7 @@ p {
 .edit-button987{
     box-shadow: 2px 2px 3px grey;
     transform: translate(150px, 35px);
+
     padding: 5px;
     width: 50px;
     height: 35px;

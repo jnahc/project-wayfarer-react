@@ -1,6 +1,7 @@
 import React from 'react';
 import PostDeleteContainer from "../containers/PostDeleteContainer/PostDeleteContainer"
 
+
 import './PostDetail.css';
 
 // reference https://stackoverflow.com/questions/2013255/how-to-get-year-month-day-from-a-date-object
