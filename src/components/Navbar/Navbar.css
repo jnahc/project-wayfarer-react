@@ -43,3 +43,7 @@
     text-shadow: 2px 2px 3px gray;
 }
 
+.navbar-dark .navbar-toggler {
+    color: purple;
+    border-color: purple;
+}
