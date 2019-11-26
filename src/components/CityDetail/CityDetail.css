@@ -26,11 +26,20 @@ h1 {
 }
 
 .cityHeader img {
-    width: 400px;
+    width: 450px;
     height: 260px;
 }
 
 .country-name{
   font-family: 'Calistoga', cursive;
-  margin-left: 255px;
 }
+
+#the-word-city-name{
+  text-shadow: 1px 1px 3px purple;
+  /* margin-left: 80px; */
+}
+
+#the-word-city-name12{
+  text-shadow: 1px 1px 3px purple;
+}
+

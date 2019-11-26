@@ -7,7 +7,7 @@
 
 .profile-border {
     border-radius: 25px;
-    border: 2px solid gold;
+    border: 2px solid purple;
     padding: 20px;
     margin-top: 20px;
     left: 20px;
@@ -45,3 +45,24 @@ p {
     margin-top: 10px;
 }
 
+#edit-button{
+    box-shadow: 2px 2px 3px grey;
+    border-radius: 15%;
+}
+
+#save-button{
+    box-shadow: 2px 2px 3px grey;
+}
+
+#edit-button1{
+    box-shadow: 2px 2px 3px grey;
+    padding: 5px;
+    width: 50px;
+    height: 35px;
+    border-radius: 15%;
+}
+
+#first-last-name-pro{
+    text-shadow: 1px 1px 3px purple;
+
+}

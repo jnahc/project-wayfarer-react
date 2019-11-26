@@ -7,9 +7,60 @@
     right: 10px;
     margin-left: 20px;
     margin-right: 40px;
-    width: 500px;
+    width: 95%;
 }
 
 .post-title{
     font-family: 'Calistoga', cursive;
 }
+
+p {
+    margin-top: 10px;
+    height: 3em;
+    word-break: break-word;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: 1em;
+}
+
+#edit-button{
+    box-shadow: 2px 2px 3px grey;
+    transform: translate(150px, 35px);
+    padding: 5px;
+    width: 50px;
+    height: 35px;
+}
+
+#posts-deets{
+    text-shadow: 1px 1px 1px purple;
+    font-size: 25px;
+}
+
+#posts-deets1{
+    text-shadow: 1px 1px 3px purple;
+}
+
+#cont1{
+    font-size: 20px;
+}
+
+#cont2{
+    font-size: 15px;
+}
+
+#save-button1{
+    box-shadow: 1px 1px 3px grey;
+    margin-top: 75px;
+}
+
+#save-button1:hover{
+    background-color: transparent;
+    border: 1px solid purple;
+}
+
+#words-edit-post{
+    text-shadow: 1px 1px 3px purple;
+}
+

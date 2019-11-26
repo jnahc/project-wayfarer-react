@@ -2,5 +2,28 @@
     float: right;
     margin-top: 9px;
     transform: translate(-90px, 0px);
+    box-shadow: 5px 5px 5px grey;
+}
 
+.form-control {
+    display: block;
+    font-weight: 400;
+    color: purple;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    width: 100% !important;
+    box-shadow: 5px 5px 5px grey;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    text-shadow: 2px 2px 5px purple;
+    font-size: 20px;
+}
+
+#save-button{
+    box-shadow: 2px 2px 3px grey;
 }

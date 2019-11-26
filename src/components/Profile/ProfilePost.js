@@ -5,8 +5,8 @@ import './ProfilePost.css'
 
 // reference https://stackoverflow.com/questions/2013255/how-to-get-year-month-day-from-a-date-object
 let dateObj = new Date();
-let month = dateObj.getMonth() + 1; //months from 1-12
-let day = dateObj.getDate();
+let month = dateObj.getUTCMonth() + 1; //months from 1-12
+let day = dateObj.getUTCDate();
 let year = dateObj.getFullYear();
 let today = year + "-" + month + "-" + day;
 
@@ -25,13 +25,32 @@ const ProfilePost = (props) => {
 
     return (
         <> 
-            <ul className="just-this" id="just-title"><strong><Link to={`/postdetail/${props.postId}`}>{props.title}</Link></strong>
+            <ul className="just-this" id="just-title">
+                <strong>
+                    {/* <Link to={`/postdetail/${props.postId}`}>{props.title}</Link> */}
+                    
+                    <a href={`/postdetail/${props.postId}`}>
+                        <img className="postpic" src={`${props.photoUrl}`} alt="post-pic"/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+
+                        {props.title}
+                    </a>
+                </strong>
             <li className="list-item1">
                 {props.body}
+                <div>
+                &nbsp;
+                </div>
+                <div id="publishday">
+                Published: {daysAgo} days ago 
+                </div>
             </li>
+
+
             <li className="list-item1">
-                Created: {daysAgo} days ago               
+                Published: {daysAgo} days ago               
             </li>
+
             </ul>
             <br></br>
         </>

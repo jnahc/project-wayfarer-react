@@ -13,6 +13,8 @@
     background-color: transparent;
     border-color: purple;
     margin-right: 4px;
+    box-shadow: 2px 2px 3px grey;
+
 }
 
 .btn-warning:hover {
@@ -27,6 +29,7 @@
     font-family: 'Calistoga', cursive;
     background-color: transparent;
     border-color: purple;
+    box-shadow: 2px 2px 3px grey;
 }
 
 .btn-primary:hover {
@@ -35,3 +38,8 @@
     background-color: transparent;
     border-color: purple;
 }
+
+#supreme-emperor12{
+    text-shadow: 2px 2px 3px gray;
+}
+
