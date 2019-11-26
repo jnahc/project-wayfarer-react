@@ -13,6 +13,7 @@ const ProfilePosts = (props) => {
                 postId={post._id}
                 title={post.title}
                 body={post.body.slice(0,50)}
+                photoUrl={post.photoUrl}
                 dateCreated={post.dateCreated}
             />
         );

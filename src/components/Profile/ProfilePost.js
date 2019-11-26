@@ -5,8 +5,8 @@ import './ProfilePost.css'
 
 // reference https://stackoverflow.com/questions/2013255/how-to-get-year-month-day-from-a-date-object
 let dateObj = new Date();
-let month = dateObj.getMonth() + 1; //months from 1-12
-let day = dateObj.getDate();
+let month = dateObj.getUTCMonth() + 1; //months from 1-12
+let day = dateObj.getUTCDate();
 let year = dateObj.getFullYear();
 let today = year + "-" + month + "-" + day;
 console.log(today)
