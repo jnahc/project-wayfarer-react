@@ -10,12 +10,9 @@ class Register extends Component {
     currentCity: '',
     password: '',
     password2: '',
-    profilePhoto: 'https://s.pngix.com/pngfile/s/468-4685538_bear-default-avatar-default-avatar-hd-png-download.png',
-    // emailDup: false,
   }
 
   handleChange = (event) => {
-    // console.log(event);
     this.setState({
       [event.target.name]: event.target.value
     });
@@ -25,8 +22,6 @@ class Register extends Component {
    
       event.preventDefault();
       console.log(this.state);
-      // let newObj = this.state
-      // delete newObj.emailDup
 
       axios.post(`${process.env.REACT_APP_API_URL}/auth/register`, this.state)
         .then((res) => {
