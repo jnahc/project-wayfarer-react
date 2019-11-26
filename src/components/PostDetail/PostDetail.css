@@ -8,7 +8,7 @@
     margin-left: 20px;
     margin-right: 40px;
     width: 95%;
-    height: 800px;
+    height: 1000px;
 }
 
 .post-title{
@@ -23,17 +23,27 @@ p {
 p {
     margin-top: 0;
     margin-bottom: 1rem;
-    padding: 1em;
+    /* padding: 1em; */
 }
 
-#edit-button{
+.edit-button987{
     box-shadow: 2px 2px 3px grey;
     transform: translate(150px, 35px);
 
     padding: 5px;
     width: 50px;
     height: 35px;
+    border-radius: 15%;
+    margin-top: 300px;
+
 }
+/* #edit-button{
+    box-shadow: 2px 2px 3px grey;
+    transform: translate(150px, 35px);
+    padding: 5px;
+    width: 50px;
+    height: 35px;
+} */
 
 #posts-deets{
     text-shadow: 1px 1px 1px purple;
@@ -66,3 +76,8 @@ p {
     text-shadow: 1px 1px 3px purple;
 }
 
+.test {
+    margin: 25px;
+    
+
+}
