@@ -31,26 +31,18 @@ const PostDetail = (props) => {
         return (
             <>
             <div className="post-detail"> 
-                <h2 className="post-title">{props.title}  <button className="btn-warning1 editButton mt-5 " onClick={() => props.onEdit()}>Edit</button><PostDeleteContainer /></h2>
+                <h2 className="post-title">{props.title}</h2>
                 <h4>Author: {props.postAuthor.firstName} {props.postAuthor.lastName}</h4>
                 <p>Created: {daysAgo} days ago</p>
                 <p>City: {props.city.name}</p>
                 <p>Country: {props.city.country}</p>
                 <p>{props.body}</p>
-<<<<<<< HEAD
-                <div className="row">
-                    
-                </div>
-            </div>
-        );
-=======
                 <button className="btn-warning1 edit-button987" onClick={() => props.onEdit()}>Edit</button>
                 <PostDeleteContainer />
             </div>
             </>
 
         )
->>>>>>> 0bd1b53f3893b0acfb48154bc3ddc5a53dbb6b1f
     } else if (!props.editPost && postAuthorId !== currentUserId) {
         return (
             <div className="post-detail"> 
